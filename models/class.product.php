@@ -59,13 +59,17 @@ class Product {
 		}
 	}
 
+	public function get_newest($category_id = 0) {
+		return select_query_assoc('SELECT id, name, description, price, image_url FROM product ORDER BY id DESC LIMIT 4');
+	}
+
 	public function get_categories() {
 		return select_query_assoc('SELECT id, category FROM product_category');
 	}
 
 	//add categories
 	//remove categories
-	
+
 }
 
 ?>

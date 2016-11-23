@@ -23,18 +23,29 @@
 					{/if}
 				</div>
 				{foreach from=$products item=$product} 
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img class="ratio img-thumbnail" alt="Bootstrap Thumbnail First" src="imgs/{$product.image_url}">
-						<div class="caption">
-							<h4 class="pull-right">{$product.price}€</h4>
-							<h4 class="text-primary">{$product.name}</h4>
-							<!--<p> {$product.description} </p>-->
-							<p>
-								<a class="btn btn-primary" href="index.php?page=details&id={$product.id}">Details</a>
-								<a href="#"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/> </a>
-							</p>
+				<div class="col-md-3">
+					<div class="product-item">
+						<div class="pi-img-wrapper">
+							<img src="imgs/{$product.image_url}" class="img-responsive" alt="{$product.name}">
+							<div>
+								<a href="index.php?page=details&id={$product.id}" class="btn">Details</a>
+							</div>
 						</div>
+						<h3><a href="index.php?page=details&id={$product.id}">{$product.name}</a></h3>
+						<div class="pi-price">{$product.price}€</div>
+						<a href="index.php?page=details&id={$product.id}" class="btn add2cart">Add to cart</a>
+							<select class="add2cart">
+								<option value='1'>1</option>
+								<option value='2'>2</option>
+								<option value='3'>3</option>
+								<option value='4'>4</option>
+								<option value='5'>5</option>
+								<option value='6'>6</option>
+								<option value='7'>7</option>
+								<option value='8'>8</option>
+								<option value='9'>9</option>
+								<option value='10'>10</option>
+						</select>
 					</div>
 				</div>
 				{/foreach}

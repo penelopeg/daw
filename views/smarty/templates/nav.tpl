@@ -33,14 +33,18 @@
 		</ul>
 		
 		<ul class="nav navbar-nav navbar-right">
-			<li >
+			<li>
 				<a href="{$field1.href}">
-					<span class="glyphicon glyphicon-user" aria-hidden="true"/>
-					 {$field1.name}
+					<span class="glyphicon glyphicon-log-in" aria-hidden="true"/>{$field1.name}
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="index.php/?page=register">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"/>Register
+				</a>
+			</li>
+			<li>
+				<a href="index.php?page=cart">
 					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/>
 				</a>
 			</li>

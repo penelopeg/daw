@@ -58,19 +58,21 @@ if (isset($_GET['page'])) {
 			include('controllers/shop.php');
 			break;
 
-		case 'shoppingcart':
+		case 'cart':
+			include('controllers/cart.php');
 			break;
 
 		case 'order':
 			break;
 
 		case 'backoffice':
+			header('location: backoffice/index.php');
 			break;
 	}
 }
 else {
 	//index code
-	$products = Product::get_products();
+	$products = Product::get_newest();
 	$smarty->assign('products', $products);
 
 	session_start();
@@ -86,6 +88,7 @@ else {
 		$smarty->assign('login',0);
 	}
 	$smarty->display('index.tpl');
+	
 }
 
 ?>

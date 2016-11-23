@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 13:10:09
+/* Smarty version 3.1.30, created on 2016-11-23 17:15:15
   from "/var/www/html/ecommerce_daw/views/smarty/templates/shop.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583587215a54a3_50103863',
+  'unifunc' => 'content_5835c09312cb05_55431635',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c7c9aad4dba241155713e5f3a40fb4b8cbcae426' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/shop.tpl',
-      1 => 1479902994,
+      1 => 1479917709,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_583587215a54a3_50103863 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5835c09312cb05_55431635 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,23 +62,36 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 ?> 
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img class="ratio img-thumbnail" alt="Bootstrap Thumbnail First" src="imgs/<?php echo $_smarty_tpl->tpl_vars['product']->value['image_url'];?>
+				<div class="col-md-3">
+					<div class="product-item">
+						<div class="pi-img-wrapper">
+							<img src="imgs/<?php echo $_smarty_tpl->tpl_vars['product']->value['image_url'];?>
+" class="img-responsive" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
 ">
-						<div class="caption">
-							<h4 class="pull-right"><?php echo $_smarty_tpl->tpl_vars['product']->value['price'];?>
-€</h4>
-							<h4 class="text-primary"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
-</h4>
-							<!--<p> <?php echo $_smarty_tpl->tpl_vars['product']->value['description'];?>
- </p>-->
-							<p>
-								<a class="btn btn-primary" href="index.php?page=details&id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
-">Details</a>
-								<a href="#"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/> </a>
-							</p>
+							<div>
+								<a href="index.php?page=details&id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+" class="btn">Details</a>
+							</div>
 						</div>
+						<h3><a href="index.php?page=details&id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+</a></h3>
+						<div class="pi-price"><?php echo $_smarty_tpl->tpl_vars['product']->value['price'];?>
+€</div>
+						<a href="index.php?page=details&id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+" class="btn add2cart">Add to cart</a>
+							<select class="add2cart">
+								<option value='1'>1</option>
+								<option value='2'>2</option>
+								<option value='3'>3</option>
+								<option value='4'>4</option>
+								<option value='5'>5</option>
+								<option value='6'>6</option>
+								<option value='7'>7</option>
+								<option value='8'>8</option>
+								<option value='9'>9</option>
+								<option value='10'>10</option>
+						</select>
 					</div>
 				</div>
 				<?php

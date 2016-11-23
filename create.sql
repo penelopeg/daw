@@ -88,13 +88,14 @@ FOREIGN KEY (product_id) REFERENCES product(id)
 INSERT INTO user_type (type) VALUES ('admin');
 INSERT INTO user_type (type) VALUES ('editor');
 
-INSERT INTO product_category (category) VALUES ('Christmas');
-INSERT INTO product_category (category) VALUES ('Easter');
 INSERT INTO product_category (category) VALUES ('Tv Shows');
 INSERT INTO product_category (category) VALUES ('Movies');
+INSERT INTO product_category (category) VALUES ('Christmas');
+INSERT INTO product_category (category) VALUES ('Easter');
 INSERT INTO product_category (category) VALUES ('Halloween');
 INSERT INTO product_category (category) VALUES ('Harry Potter');
 INSERT INTO product_category (category) VALUES ('Star Wars');
+INSERT INTO product_category (category) VALUES ('Star Trek');
 
 INSERT INTO order_status (status) VALUES ('Preparing');
 INSERT INTO order_status (status) VALUES ('Shipping');
@@ -113,10 +114,11 @@ INSERT INTO user (user_type_id, firstname, lastname, email, password) VALUES (2,
 INSERT INTO client (firstname, lastname, email, reg_date, password, address,city_id, country_id, payment_info) VALUES ("John", "Doe", "johndoe@gmail.com", NOW(), "6579e96f76baa00787a28653876c6127", "Rua das flores", 1, 1, "credit card");
 INSERT INTO client (firstname, lastname, email, reg_date, password, address,city_id, country_id, payment_info) VALUES ("Joao", "Do", "jodo@gmail.com", NOW(), "3b46bc68e71b92634a97ab3a0b01dbe4", "Rua das Pedras", 2, 2, "paypal");
 
-INSERT INTO product (name, description, price) VALUES ("Darth Vader Mug", "If you like your coffee on the dark side! Tea, Coffee & Hot Chocolate never looked so good!", 20, 'Darth-Vader-figural-mug.jpg');
+INSERT INTO product (name, description, price, image_url) VALUES ("Darth Vader Mug", "If you like your coffee on the dark side! Tea, Coffee & Hot Chocolate never looked so good!", 20, 'Darth-Vader-figural-mug.jpg');
 insert into product (name, description, price, image_url) values ('Harry Potter Triwizard Cup Lamp', 'For the victorious!', '29,99', 'triwizarcup.jpg');
 insert into product (name, description, price, image_url) values ('Star Wars R2-D2 Coffee Press', 'Beep bean bloop brew!', '39,99', 'r2d2_coffeepress.jpg');
 insert into product (name, description, price, image_url) values ('Marvel Groot USB Car Charger', "Groot dances while plugged in and turned on - he's sound activated!", '40', 'usbcharger_groot.jpg');
+insert into product (name, description, price, image_url) values ('Star Trek Delta Enamel Stud Earrings', "Made of sterling silver and hard enamel! Choose science blue, engineering red, or command gold", '94,95', 'startrek_earrings.jpg');
 
 
 INSERT INTO product_2_categories (product_id, category_id) VALUES (1, 7);
