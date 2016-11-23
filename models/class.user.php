@@ -52,7 +52,7 @@ class User {
 
 	public function check_user($email, $password) {
 		$res = select_query_assoc(
-			'SELECT id, email FROM user WHERE email = ? AND password = ?', 
+			'SELECT user.id, email, type FROM user, user_type WHERE user.user_type_id = user_type.id AND email = ? AND password = ?', 
 			array($email, $password)
 		);
 		if (!empty($res)) {

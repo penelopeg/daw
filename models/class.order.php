@@ -1,24 +1,3 @@
-/*
-CREATE TABLE orders (
-id INT(6) AUTO_INCREMENT PRIMARY KEY,
-client_id INT(6),
-order_date TIMESTAMP,
-status_id INT(6),
-FOREIGN KEY (status_id) REFERENCES order_status(id),
-FOREIGN KEY (client_id) REFERENCES client(id)
-);
-
-CREATE TABLE product_2_orders (
-order_id INT(6) NOT NULL,
-product_id INT(6) NOT NULL,
-quantity INT(100),
-price_total INT (100),
-FOREIGN KEY (order_id) REFERENCES orders(id),
-FOREIGN KEY (product_id) REFERENCES product(id)
-);
-
-*/
-
 <?php
 
 class Order {
@@ -75,7 +54,7 @@ class Order {
 			foreach ($this->products as $product) {
 				execute_query(
 					'INSERT INTO product_2_orders (order_id, product_id, quantity, price_total) VALUES (?, ?, ?, ?)', 
-					array($this->id, $product['product_id'], $product['quantity'], $product['price_total']);
+					array($this->id, $product['product_id'], $product['quantity'], $product['price_total'])
 				);
 			}
 		}

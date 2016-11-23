@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 17:09:57
-  from "/var/www/html/ecommerce_daw/views/smarty/templates/nav.tpl" */
+/* Smarty version 3.1.30, created on 2016-11-23 17:29:00
+  from "/var/www/html/daw/views/smarty/templates/nav.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835bf553efe36_32485097',
+  'unifunc' => 'content_5835c3cc09d3e3_17656763',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '37648f2802b947ba81a6aad40cf8c6996f527b6f' => 
+    '6b438fcc6b94ede07d6c25bf365f91e5f4594d02' => 
     array (
-      0 => '/var/www/html/ecommerce_daw/views/smarty/templates/nav.tpl',
-      1 => 1479917395,
+      0 => '/var/www/html/daw/views/smarty/templates/nav.tpl',
+      1 => 1479918531,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5835bf553efe36_32485097 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5835c3cc09d3e3_17656763 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="navbar-header">
