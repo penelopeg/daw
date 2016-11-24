@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 17:29:00
+/* Smarty version 3.1.30, created on 2016-11-24 15:55:34
   from "/var/www/html/daw/views/smarty/templates/nav.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835c3cc09d3e3_17656763',
+  'unifunc' => 'content_5836ff661c92e0_65524668',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6b438fcc6b94ede07d6c25bf365f91e5f4594d02' => 
     array (
       0 => '/var/www/html/daw/views/smarty/templates/nav.tpl',
-      1 => 1479918531,
+      1 => 1479999203,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5835c3cc09d3e3_17656763 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5836ff661c92e0_65524668 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-		</button> <a class="navbar-brand" href="index.php">Geekin' Out</a>
+		</button> <a class="navbar-brand" href="index.php"><img src="imgs/logo_thumb.png"/></a>
 	</div>
 	
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<div class="collapse navbar-collapse marginnav" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
 			<li class="active">
 				<a href="#">Sales!</a>
@@ -71,18 +71,28 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 			<li>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['field1']->value['href'];?>
 ">
-					<span class="glyphicon glyphicon-log-in" aria-hidden="true"/><?php echo $_smarty_tpl->tpl_vars['field1']->value['name'];?>
+					<span class="glyphicon glyphicon-log-in"/><?php echo $_smarty_tpl->tpl_vars['field1']->value['name'];?>
 
 				</a>
 			</li>
+			<?php if (!empty($_smarty_tpl->tpl_vars['usermenu']->value)) {?>
 			<li>
-				<a href="index.php/?page=register">
-					<span class="glyphicon glyphicon-user" aria-hidden="true"/>Register
+				<a href="<?php echo $_smarty_tpl->tpl_vars['usermenu']->value['href'];?>
+">
+					<?php echo $_smarty_tpl->tpl_vars['usermenu']->value['name'];?>
+
 				</a>
 			</li>
+			<?php } else { ?>
+			<li>
+				<a href="index.php?page=register">
+					<span class="glyphicon glyphicon-user"/>Register
+				</a>
+			</li>
+			<?php }?>
 			<li>
 				<a href="index.php?page=cart">
-					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/>
+					<span class="glyphicon glyphicon-shopping-cart"/>
 				</a>
 			</li>
 		</ul>

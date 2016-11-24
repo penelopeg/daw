@@ -14,6 +14,6 @@
 	else{
 		session_start();
 		$_SESSION[$user['type']] = $user['email'];
-		header('location: index.php');
+		header('location: index.php?page=index');
 	}
 ?>

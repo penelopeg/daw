@@ -14,9 +14,11 @@
 	$smarty->setConfigDir('../views/smarty/configs');
 	session_start();
 	if(isset($_SESSION['admin']) || isset($_SESSION['editor']))
-	{
+	{	
+		$page = $_GET['page'];
+		$smarty->assign('page', $page);
 		$smarty->display('backoffice/head.tpl');
-		$smarty->display('backoffice/index.tpl');
+		$smarty->display('backoffice/'.$page.'.tpl');
 		$smarty->display('backoffice/footer.tpl');
 	}
 	else

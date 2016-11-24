@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 22:03:56
+/* Smarty version 3.1.30, created on 2016-11-24 17:46:18
   from "/var/www/html/daw/views/smarty/templates/backoffice/head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5836043c441f69_12556386',
+  'unifunc' => 'content_5837195aac4885_72255218',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '185b97c310a7eeeb6e23482b01829e0bcffdee3d' => 
     array (
       0 => '/var/www/html/daw/views/smarty/templates/backoffice/head.tpl',
-      1 => 1479935034,
+      1 => 1480005974,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5836043c441f69_12556386 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5837195aac4885_72255218 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,29 +45,29 @@ function content_5836043c441f69_12556386 (Smarty_Internal_Template $_smarty_tpl)
 				<a target="_blank" href="../index.php" class="navbar-brand">GeekinOut</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Clients</a></li>
-				<li class="dropdown">
+				<li <?php if ($_smarty_tpl->tpl_vars['page']->value == 'index') {?> class="active" <?php }?>><a href="index.php?page=index">Home</a></li>
+				<li <?php if ($_smarty_tpl->tpl_vars['page']->value == 'clients') {?> class="active" <?php }?>><a href="index.php?page=clients">Clients</a></li>
+				<li class="dropdown <?php if ($_smarty_tpl->tpl_vars['page']->value == 'addProd' || $_smarty_tpl->tpl_vars['page']->value == 'editProd' || $_smarty_tpl->tpl_vars['page']->value == 'remProd') {?> active <?php }?>">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Products
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Add Product</a></li>
-						<li><a href="#">Edit Product</a></li>
-						<li><a href="#">Remove Product</a></li>
+						<li><a href="index.php?page=addProd">Add Product</a></li>
+						<li><a href="index.php?page=editProd">Edit Product</a></li>
+						<li><a href="index.php?page=remProd">Remove Product</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Orders</a></li>			
-				<li class="dropdown">
+				<li <?php if ($_smarty_tpl->tpl_vars['page']->value == 'orders') {?> class="active" <?php }?>><a href="index.php?page=orders">Orders</a></li>			
+				<li class="dropdown <?php if ($_smarty_tpl->tpl_vars['page']->value == 'addUser' || $_smarty_tpl->tpl_vars['page']->value == 'editUser' || $_smarty_tpl->tpl_vars['page']->value == 'remUser') {?> active <?php }?>">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Users
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Add User</a></li>
-						<li><a href="#">Edit User</a></li>
-						<li><a href="#">Remove User</a></li>
+						<li><a href="index.php?page=addUser">Add User</a></li>
+						<li><a href="index.php?page=editUser">Edit User</a></li>
+						<li><a href="index.php?page=remUser">Remove User</a></li>
 					</ul>
 				</li>
 			</ul>				

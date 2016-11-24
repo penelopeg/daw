@@ -17,29 +17,29 @@
 				<a target="_blank" href="../index.php" class="navbar-brand">GeekinOut</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Clients</a></li>
-				<li class="dropdown">
+				<li {if $page=='index'} class="active" {/if}><a href="index.php?page=index">Home</a></li>
+				<li {if $page=='clients'} class="active" {/if}><a href="index.php?page=clients">Clients</a></li>
+				<li class="dropdown {if $page=='addProd' || $page=='editProd' || $page=='remProd'} active {/if}">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Products
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Add Product</a></li>
-						<li><a href="#">Edit Product</a></li>
-						<li><a href="#">Remove Product</a></li>
+						<li><a href="index.php?page=addProd">Add Product</a></li>
+						<li><a href="index.php?page=editProd">Edit Product</a></li>
+						<li><a href="index.php?page=remProd">Remove Product</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Orders</a></li>			
-				<li class="dropdown">
+				<li {if $page=='orders'} class="active" {/if}><a href="index.php?page=orders">Orders</a></li>			
+				<li class="dropdown {if $page=='addUser' || $page=='editUser' || $page=='remUser'} active {/if}">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Users
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Add User</a></li>
-						<li><a href="#">Edit User</a></li>
-						<li><a href="#">Remove User</a></li>
+						<li><a href="index.php?page=addUser">Add User</a></li>
+						<li><a href="index.php?page=editUser">Edit User</a></li>
+						<li><a href="index.php?page=remUser">Remove User</a></li>
 					</ul>
 				</li>
 			</ul>				
