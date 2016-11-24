@@ -40,9 +40,6 @@ if(isset($_COOKIE['cart'])) {
 		$total += $product['price'] * $quantity; 
 	}
 }
-else {
-
-}
 	$smarty->assign('products', $products);
 	$smarty->assign('total', $total);
 

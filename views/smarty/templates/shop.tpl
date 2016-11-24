@@ -22,7 +22,7 @@
 						<h3>{$noresults}</h3>
 					{/if}
 				</div>
-				<div id="added"></div>
+				<div id="added" class="has-success animated fadeInUp"></div>
 				{foreach from=$products item=$product} 
 				<div class="col-md-3">
 					<div class="product-item">

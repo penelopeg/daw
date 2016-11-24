@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 23:53:10
+/* Smarty version 3.1.30, created on 2016-11-24 11:58:52
   from "/var/www/html/ecommerce_daw/views/smarty/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58361dd68bfda6_73215832',
+  'unifunc' => 'content_5836c7ec66e548_86924177',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b082d58f3f0abab18256e1ff79bb9f5850e6387' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/index.tpl',
-      1 => 1479941035,
+      1 => 1479985130,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_58361dd68bfda6_73215832 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5836c7ec66e548_86924177 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,6 +43,9 @@ function content_58361dd68bfda6_73215832 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 	<div class="container-fluid">
+	<div class="row margintop">
+		<img src="imgs/logo.png"/>
+	</div>
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
@@ -50,7 +53,7 @@ function content_58361dd68bfda6_73215832 (Smarty_Internal_Template $_smarty_tpl)
 ?>
 
 
-				<div class="carousel slide margintop" id="carousel-173855">
+				<div class="carousel slide marginsides" id="carousel-173855">
 					<ol class="carousel-indicators">
 						<li class="active" data-slide-to="0" data-target="#carousel-173855">
 						</li>
@@ -62,10 +65,10 @@ function content_58361dd68bfda6_73215832 (Smarty_Internal_Template $_smarty_tpl)
 							<img alt="Carousel Bootstrap First" src="imgs/slider/holiday.jpg">
 							<div class="carousel-caption">
 								<h4>
-									First Thumbnail label
+									Get them before they run away
 								</h4>
 								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+									New items are up!
 								</p>
 							</div>
 						</div>
@@ -73,16 +76,16 @@ function content_58361dd68bfda6_73215832 (Smarty_Internal_Template $_smarty_tpl)
 							<img alt="Carousel Bootstrap Second" src="imgs/slider/lights.jpg">
 							<div class="carousel-caption">
 								<h4>
-									Second Thumbnail label
+									Geekin' out
 								</h4>
 								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+									Fun geek gifts for everybody!
 								</p>
 							</div>
 						</div>
 					</div> <a class="left carousel-control" href="#carousel-173855" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-173855" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 				</div>
-				<div class="row">
+				<div class="row marginsides">
 					<div id="added"></div>
 					<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');

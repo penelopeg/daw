@@ -25,19 +25,19 @@
 					Vortex of links
 				</dt>
 				<p>
-					<a href="#">Home</a>
+					<a href="index.php">Home</a>
 				</p>
 				<p>
-					<a href="#">About us</a>
+					<a href="index.php?page=about">About us</a>
 				</p>
 				<p>
-					<a href="#">Shop</a>
+					<a href="index.php?page=shop">Shop</a>
 				</p>
 				<p>
-					<a href="#">Your cart</a>
+					<a href="index.php?page=cart">Your cart</a>
 				</p>
 				<p>
-					<a href="#">Contacts</a>
+					<a href="index.php?page=contacts">Contacts</a>
 				</p>
 			</dl>
 		</div>
@@ -51,7 +51,6 @@
 
 	<div class="row">
 		<p class="col-sm-6">© 2016 Desenvolvimento de Aplicações Web</p>
-		<p class="col-sm-1"><span> <a href="index.php?page=backoffice">Backoffice</a></span></p>
-		<p class="col-sm-5 text-right">Designed by Penélope Gonçalves</p>
+		<p class="col-sm-6 text-right">Designed by Penélope Gonçalves <span> <a href="index.php?page=backoffice" alt="Backoffice"><span class="glyphicon glyphicon-cog"></a></span></p>
 	</div>
 </section>

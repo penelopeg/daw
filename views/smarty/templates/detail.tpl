@@ -22,7 +22,7 @@
 	<section class="container margintop">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<div id="added"></div>
+				<div id="added" class="has-success animated fadeInUp"></div>
 				<h3>
 					{$product.name}
 				</h3>

@@ -1,3 +1,4 @@
+/*global */
 body {
 	background: #f1f1f1;
 }
@@ -6,8 +7,9 @@ body {
 	margin-top:	80px;
 }
 
-.marginfooter {
-	margin-top:	30px;
+.marginsides {
+	margin-right: 50px;
+	margin-left: 50px;
 }
 
 .ratio {
@@ -19,18 +21,28 @@ body {
 	display:none;
 }
 
+/* details */
 .detail {
 	max-width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/*navbar*/
+.marginnav {
+	margin-right: 10px;
+	margin-left: 10px;
+}
 /*
 footer
 */
 .footer {
 	background-color: #111;
 }
+.marginfooter {
+	margin-top:	30px;
+}
+
 
 /*shop items */
 

@@ -9,3 +9,18 @@ $('.addcart').click(function(event){
 		}
 	});
 });
+
+
+
+$('.removecart').click(function(event){
+	var id = $(this).parent().find('.product-id').html();
+	$.ajax({
+		url: 'controllers/remove_from_cart.php',
+		data: 'id='+id,
+		success: function(data) {
+			location.reload();
+		}
+	});
+});
+
+

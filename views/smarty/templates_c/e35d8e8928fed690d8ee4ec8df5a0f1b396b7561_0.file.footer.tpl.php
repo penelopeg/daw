@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 00:06:33
+/* Smarty version 3.1.30, created on 2016-11-24 11:34:40
   from "/var/www/html/ecommerce_daw/views/smarty/templates/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583620f90c9657_43467605',
+  'unifunc' => 'content_5836c2402544d7_21753204',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e35d8e8928fed690d8ee4ec8df5a0f1b396b7561' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/footer.tpl',
-      1 => 1479942391,
+      1 => 1479983676,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583620f90c9657_43467605 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5836c2402544d7_21753204 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <section class="container-fluid footer margintop">
 	<div class="row marginfooter">
@@ -49,19 +49,19 @@ function content_583620f90c9657_43467605 (Smarty_Internal_Template $_smarty_tpl)
 					Vortex of links
 				</dt>
 				<p>
-					<a href="#">Home</a>
+					<a href="index.php">Home</a>
 				</p>
 				<p>
-					<a href="#">About us</a>
+					<a href="index.php?page=about">About us</a>
 				</p>
 				<p>
-					<a href="#">Shop</a>
+					<a href="index.php?page=shop">Shop</a>
 				</p>
 				<p>
-					<a href="#">Your cart</a>
+					<a href="index.php?page=cart">Your cart</a>
 				</p>
 				<p>
-					<a href="#">Contacts</a>
+					<a href="index.php?page=contacts">Contacts</a>
 				</p>
 			</dl>
 		</div>
@@ -75,8 +75,7 @@ function content_583620f90c9657_43467605 (Smarty_Internal_Template $_smarty_tpl)
 
 	<div class="row">
 		<p class="col-sm-6">© 2016 Desenvolvimento de Aplicações Web</p>
-		<p class="col-sm-1"><span> <a href="index.php?page=backoffice">Backoffice</a></span></p>
-		<p class="col-sm-5 text-right">Designed by Penélope Gonçalves</p>
+		<p class="col-sm-6 text-right">Designed by Penélope Gonçalves <span> <a href="index.php?page=backoffice" alt="Backoffice"><span class="glyphicon glyphicon-cog"></a></span></p>
 	</div>
 </section><?php }
 }

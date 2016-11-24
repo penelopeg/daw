@@ -14,14 +14,14 @@
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
-			{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
-				
+			{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}		
 			</div>
 		</div>
 	</div>
 	<div class="container margintop">
 		<div class="row">
 			<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<div id="removed"></div>
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -49,7 +49,8 @@
 							<td class="col-md-1 text-center"><strong>{$product.price}€</strong></td>
 							<td class="col-md-1 text-center"><strong>{$product.total}€</strong></td>
 							<td class="col-md-1">
-								<button type="button" class="btn btn-danger">
+								<div class="product-id hidden">{$product.id}</div>
+								<button type="button" class="btn btn-danger removecart">
 									<span class="glyphicon glyphicon-remove"></span> Remove
 								</button></td>
 						</tr>
@@ -71,7 +72,7 @@
 								</button>
 							</td>
 							<td>
-								<button type="button" class="btn btn-success">
+								<button onclick="location.href='index.php?page=order';" type="button" class="btn btn-success">
 									Checkout <span class="glyphicon glyphicon-play"></span>
 								</button>
 							</td>
@@ -83,5 +84,6 @@
 	</div>
 	<!-- footer -->
 	{include file="footer.tpl"}
+	<script src="js/handler.js"></script>
 </body>
 </html>

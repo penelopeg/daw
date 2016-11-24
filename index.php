@@ -69,6 +69,7 @@ if (isset($_GET['page'])) {
 			break;
 
 		case 'order':
+			include('controllers/order.php');
 			break;
 
 		case 'backoffice':
@@ -85,7 +86,6 @@ else {
 	$products = Product::get_newest();
 	$smarty->assign('products', $products);
 	$smarty->display('index.tpl');
-	
 }
 
 ?>

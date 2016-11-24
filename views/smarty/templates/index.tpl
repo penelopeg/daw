@@ -11,12 +11,15 @@
 </head>
 <body>
 	<div class="container-fluid">
+	<div class="row margintop">
+		<img src="imgs/logo.png"/>
+	</div>
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
 				{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
 
-				<div class="carousel slide margintop" id="carousel-173855">
+				<div class="carousel slide marginsides" id="carousel-173855">
 					<ol class="carousel-indicators">
 						<li class="active" data-slide-to="0" data-target="#carousel-173855">
 						</li>
@@ -28,10 +31,10 @@
 							<img alt="Carousel Bootstrap First" src="imgs/slider/holiday.jpg">
 							<div class="carousel-caption">
 								<h4>
-									First Thumbnail label
+									Get them before they run away
 								</h4>
 								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+									New items are up!
 								</p>
 							</div>
 						</div>
@@ -39,16 +42,16 @@
 							<img alt="Carousel Bootstrap Second" src="imgs/slider/lights.jpg">
 							<div class="carousel-caption">
 								<h4>
-									Second Thumbnail label
+									Geekin' out
 								</h4>
 								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+									Fun geek gifts for everybody!
 								</p>
 							</div>
 						</div>
 					</div> <a class="left carousel-control" href="#carousel-173855" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-173855" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 				</div>
-				<div class="row">
+				<div class="row marginsides">
 					<div id="added"></div>
 					{foreach from=$products item=$product} 
 					<div class="col-md-3">

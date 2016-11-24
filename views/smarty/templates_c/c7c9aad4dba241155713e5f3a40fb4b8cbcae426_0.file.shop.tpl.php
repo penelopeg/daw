@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 21:24:44
+/* Smarty version 3.1.30, created on 2016-11-24 11:27:51
   from "/var/www/html/ecommerce_daw/views/smarty/templates/shop.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835fb0cf287e6_38366657',
+  'unifunc' => 'content_5836c0a7f0fe74_83879290',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c7c9aad4dba241155713e5f3a40fb4b8cbcae426' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/shop.tpl',
-      1 => 1479932369,
+      1 => 1479983268,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5835fb0cf287e6_38366657 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5836c0a7f0fe74_83879290 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,7 +57,7 @@ function content_5835fb0cf287e6_38366657 (Smarty_Internal_Template $_smarty_tpl)
 </h3>
 					<?php }?>
 				</div>
-				<div id="added"></div>
+				<div id="added" class="has-success animated fadeInUp"></div>
 				<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');
 if ($_from !== null) {

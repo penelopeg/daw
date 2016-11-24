@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 19:09:10
+/* Smarty version 3.1.30, created on 2016-11-24 11:49:48
   from "/var/www/html/ecommerce_daw/views/smarty/templates/nav.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835db469b5f17_27818243',
+  'unifunc' => 'content_5836c5cc774062_33084449',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37648f2802b947ba81a6aad40cf8c6996f527b6f' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/nav.tpl',
-      1 => 1479924548,
+      1 => 1479984586,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5835db469b5f17_27818243 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5836c5cc774062_33084449 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-		</button> <a class="navbar-brand" href="index.php">Geekin' Out</a>
+		</button> <a class="navbar-brand" href="index.php"><img src="imgs/logo_thumb.png"/></a>
 	</div>
 	
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<div class="collapse navbar-collapse marginnav" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
 			<li class="active">
 				<a href="#">Sales!</a>
