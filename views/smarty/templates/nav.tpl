@@ -35,17 +35,25 @@
 		<ul class="nav navbar-nav navbar-right">
 			<li>
 				<a href="{$field1.href}">
-					<span class="glyphicon glyphicon-log-in" aria-hidden="true"/>{$field1.name}
+					<span class="glyphicon glyphicon-log-in"/>{$field1.name}
 				</a>
 			</li>
+			{if !empty($usermenu)}
 			<li>
-				<a href="index.php/?page=register">
-					<span class="glyphicon glyphicon-user" aria-hidden="true"/>Register
+				<a href="{$usermenu.href}">
+					{$usermenu.name}
 				</a>
 			</li>
+			{else}
+			<li>
+				<a href="index.php?page=register">
+					<span class="glyphicon glyphicon-user"/>Register
+				</a>
+			</li>
+			{/if}
 			<li>
 				<a href="index.php?page=cart">
-					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/>
+					<span class="glyphicon glyphicon-shopping-cart"/>
 				</a>
 			</li>
 		</ul>

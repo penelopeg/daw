@@ -1,116 +1,83 @@
 <?php
 
 class Order {
-	private $id;
-	private $client_id;
-	private $order_date;
-	private $status_id;
-	private $products = array();
 
-	public function __construct($id = null) {
-		$this->id = $id;
-		if(!is_null($this->id)) {
-			$this->load();
-		}
+	public function __construct() {
 	}
 
-	protected function load() {
+	public function get_order($id) {
 		$res = select_query_assoc(
-			'SELECT client_id, order_date, status_id FROM order WHERE id = ?', 
-			array($this->id)
+			'SELECT id, client_id, order_date, status_id FROM order WHERE id = ?', 
+			array($id)
 		);
 
 		$products_data = select_query_assoc(
-			'SELECT product_id, quantity, price_total FROM product_2_orders WHERE order_id = ?', 
-			array($this->id)
+			'SELECT id, product_id, quantity, price_total FROM product_2_orders WHERE order_id = ?', 
+			array($id)
 		);
 
-		if (!empty($res)) {
-			foreach (array_keys($res[0]) as $row) {
-				$this->$row = $res[0][$row];
-			}
-		}
-
-		if (!empty($products_data)) {
-			$product = array();
-			foreach ($products_data as $row) {
-				$product[$row['product_id']] = array(
-					'product_id' => $row['product_id'],
-					'quantity' => $row['quantity'],
-					'price_total' => $row['price_total']
-				);
-			}
-			$this->products = $product;
-		}
-
+		$order = array(
+			"order" => $res[0],
+			"products" => $products_data
+		);
+		return $order;
 	}
-	public function save() {
-		if (is_null($this->id)) {
-			execute_query(
-				'INSERT INTO order (client_id, order_date, status_id) VALUES (?, ?, ?)',
-				array($this->client_id, $this->order_date, $this->status_id)
-			);
-			$this->id = last_insert_id();
-			foreach ($this->products as $product) {
-				execute_query(
-					'INSERT INTO product_2_orders (order_id, product_id, quantity, price_total) VALUES (?, ?, ?, ?)', 
-					array($this->id, $product['product_id'], $product['quantity'], $product['price_total'])
-				);
-			}
+
+	public function get_orders($client_id = 0){
+		//get orders of client
+		if (!empty($client_id)) {
+			$query1 = 'SELECT id, client_id, order_date, status_id FROM order WHERE client_id = ?';
+			$query_values = array($client_id);
 		}
+		//get all orders
 		else {
-			execute_query(
-				'UPDATE order SET client_id = ?, order_date = ?, status_id = ? WHERE id = ?',
-				array($this->client_id, $this->order_date, $this->status_id, $this->id)
-			);
+			$query1 = 'SELECT id, client_id, order_date, status_id FROM order';
+			$query_values = array();
 
-			foreach($this->products as $product) {
-				if (
-					!empty(select_query_num(
-						'SELECT product_id FROM product_2_orders WHERE product_id = ? AND order_id = ?', 
-						array($product['product_id'], $this->id)
-					))
-				) {
-					execute_query(
-						'UPDATE product_2_orders SET quantity = ?, price_total = ? WHERE product_id = ? AND order_id = ?',
-						array($product['quantity'], $product['price_total'], $product['product_id'], $this->id)
-					);
-				}
-				else {
-					execute_query(
-						'INSERT INTO product_2_orders (order_id, product_id, quantity, price_total) VALUES(?, ?, ?, ?)',
-						array($this->id, $product['product_id'], $product['quantity'], $product['price_total'])
-					);
-				}
-			}
-			## delete product from orders
-			// execute_query(
-			// 	'DELETE FROM product_2_orders WHERE product_id = ? AND order_id = ?', 
-			// 	array($product_id, $this->id)
-			// );
 		}
+		$res = select_query_assoc($query1, $query_values);
+		$orders = array();
+		foreach ($res as $row) {
+			$products_data = select_query_assoc(
+				'SELECT product_id, quantity, price_total FROM product_2_orders WHERE order_id = ?', 
+				array($row['id'])
+			);
+			$orders[] = array(
+				"order" => $res[0],
+				"products" => $products_data
+			);
+		}
+		return $orders;
 	}
 
-	public function delete() {
-		execute_query('DELETE FROM product_2_orders WHERE order_id = ?', array($this->id));
+	public function add_order($client_id, $status_id, $products) {
+		execute_query(
+			'INSERT INTO order (client_id, order_date, status_id) VALUES (?, NOW(), ?)',
+			array($client_id, $status_id)
+		);
+		$id = last_insert_id();
+		foreach ($products as $product) {
+			execute_query(
+				'INSERT INTO product_2_orders (order_id, product_id, quantity, price_total) VALUES (?, ?, ?, ?)', 
+				array($id, $product['id'], $product['quantity'], $product['price_total'])
+			);
+		}
+
+	}
+	public function change_order_status($order_id, $status_id) {
+		execute_query(
+			"UPDATE order SET status_id = ? WHERE id = ?", 
+			array($status_id, $order_id)
+		);
+	}
+	
+	public function delete($id) {
+		execute_query('DELETE FROM product_2_orders WHERE order_id = ?', array($id));
 
 		execute_query(
 			'DELETE FROM order WHERE id = ?',
-			array($this->id)
+			array($id)
 		);
-	}
-
-	public function set_field($field, $value) {
-		if ($field == 'products') {
-			//
-		}
-		else {
-			$this->$field = $value;
-		}
-	}
-
-	public function get_field($field) {
-		return $this->$field;
 	}
 }
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 17:09:57
+/* Smarty version 3.1.30, created on 2016-11-23 19:09:10
   from "/var/www/html/ecommerce_daw/views/smarty/templates/nav.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835bf553efe36_32485097',
+  'unifunc' => 'content_5835db469b5f17_27818243',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37648f2802b947ba81a6aad40cf8c6996f527b6f' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/nav.tpl',
-      1 => 1479917395,
+      1 => 1479924548,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5835bf553efe36_32485097 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5835db469b5f17_27818243 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="navbar-header">
@@ -71,18 +71,28 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 			<li>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['field1']->value['href'];?>
 ">
-					<span class="glyphicon glyphicon-log-in" aria-hidden="true"/><?php echo $_smarty_tpl->tpl_vars['field1']->value['name'];?>
+					<span class="glyphicon glyphicon-log-in"/><?php echo $_smarty_tpl->tpl_vars['field1']->value['name'];?>
 
 				</a>
 			</li>
+			<?php if (!empty($_smarty_tpl->tpl_vars['usermenu']->value)) {?>
 			<li>
-				<a href="index.php/?page=register">
-					<span class="glyphicon glyphicon-user" aria-hidden="true"/>Register
+				<a href="<?php echo $_smarty_tpl->tpl_vars['usermenu']->value['href'];?>
+">
+					<?php echo $_smarty_tpl->tpl_vars['usermenu']->value['name'];?>
+
 				</a>
 			</li>
+			<?php } else { ?>
+			<li>
+				<a href="index.php?page=register">
+					<span class="glyphicon glyphicon-user"/>Register
+				</a>
+			</li>
+			<?php }?>
 			<li>
 				<a href="index.php?page=cart">
-					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/>
+					<span class="glyphicon glyphicon-shopping-cart"/>
 				</a>
 			</li>
 		</ul>

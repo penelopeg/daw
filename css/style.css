@@ -6,16 +6,30 @@ body {
 	margin-top:	80px;
 }
 
+.marginfooter {
+	margin-top:	30px;
+}
+
 .ratio {
 	height: 0;
 	width: 45%;
 }
 
+.hidden {
+	display:none;
+}
 
 .detail {
 	max-width: 50%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/*
+footer
+*/
+.footer {
+	background-color: #111;
 }
 
 /*shop items */

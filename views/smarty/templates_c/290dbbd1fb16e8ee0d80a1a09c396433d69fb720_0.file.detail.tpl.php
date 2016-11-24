@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 15:14:11
+/* Smarty version 3.1.30, created on 2016-11-23 23:41:46
   from "/var/www/html/ecommerce_daw/views/smarty/templates/detail.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835a433f03995_15115520',
+  'unifunc' => 'content_58361b2a312710_86768739',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '290dbbd1fb16e8ee0d80a1a09c396433d69fb720' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/detail.tpl',
-      1 => 1479910449,
+      1 => 1479940903,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5835a433f03995_15115520 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58361b2a312710_86768739 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,7 +46,7 @@ function content_5835a433f03995_15115520 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
-				<?php $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('field1'=>$_smarty_tpl->tpl_vars['field1']->value), 0, false);
+			<?php $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('field1'=>$_smarty_tpl->tpl_vars['field1']->value,'product_categories'=>$_smarty_tpl->tpl_vars['product_categories']->value,'usermenu'=>$_smarty_tpl->tpl_vars['usermenu']->value), 0, false);
 ?>
 
 				
@@ -56,10 +56,11 @@ function content_5835a433f03995_15115520 (Smarty_Internal_Template $_smarty_tpl)
 	<section class="container margintop">
 		<div class="panel panel-default">
 			<div class="panel-body">
-						<h3>
-							<?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+				<div id="added"></div>
+				<h3>
+					<?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
 
-						</h3>
+				</h3>
 				<div class="row">
 					<div class="col-md-8">
 						<img class="detail" alt="Bootstrap Image Preview" src="imgs/<?php echo $_smarty_tpl->tpl_vars['product']->value['image_url'];?>
@@ -74,7 +75,9 @@ function content_5835a433f03995_15115520 (Smarty_Internal_Template $_smarty_tpl)
 							<?php echo $_smarty_tpl->tpl_vars['product']->value['price'];?>
 €
 						</h3>
-						<select>
+						<div class="product-id hidden"><?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+</div>
+						<select class="quant">
 							<option value='1'>1</option>
 							<option value='2'>2</option>
 							<option value='3'>3</option>
@@ -86,7 +89,7 @@ function content_5835a433f03995_15115520 (Smarty_Internal_Template $_smarty_tpl)
 							<option value='9'>9</option>
 							<option value='10'>10</option>
 						</select>
-						<button type="button" class="btn btn-default">
+						<button type="button" class="addcart btn btn-default">
 							Add to Cart
 						</button>
 					</div>
@@ -98,6 +101,9 @@ function content_5835a433f03995_15115520 (Smarty_Internal_Template $_smarty_tpl)
 	<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
+	<?php echo '<script'; ?>
+ src="js/handler.js"><?php echo '</script'; ?>
+>
 </body>
 </html><?php }
 }

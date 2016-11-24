@@ -1,21 +1,21 @@
 <?php
 	include('../db.php');
 	include('../functions.php');
+	require('../models/class.client.php');
 	if(isset($_POST['email']))
 	{	
 		$email = $_POST['email'];
-		$pwd = $_POST['pwd'];
-		$hashpwd = md5($pwd);
-		require('../models/class.client.php');
-		$user = Client::check_client($email, $hashpwd);
-		if (!empty($user)) {
+		$password = $_POST['pwd'];
+		if(!($user = Client::check_client($email, md5($password)))) {
+			$message = "Wrong email/password!";
+			$class = "alert alert-danger animated fadeInUp";
+			header("location: ../index.php?page=login&message=$message&class=$class");
+		}
+		else{
 			session_start();
 			$_SESSION['login']=$user;
+			header('location: ../index.php');
 			echo $user['id'];
-			header("location: ../views/login_success.html");
-		}
-		else {
-			header("location: ../views/login_failed.html");
 		}
 	}
 	else

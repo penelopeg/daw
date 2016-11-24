@@ -14,14 +14,16 @@
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
-				{include file="nav.tpl" field1=$field1}
+			{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
 			</div>
 		</div>
 	<section class="container margintop">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<h2 id="title">Formulário de Cadastro</h2>
-				<h2 style="color: red;">{$message}</h2>
+				{if isset($class) && isset($message)}
+        			<div id="output" class="{$class}">{$message}</div>
+        		{/if}
+				<h2 id="title">Sign Up</h2>
 				<form method="post" action="controllers/register_action.php">
 					<div class="form-group">
 						<label for="firstname">First Name:</label>
@@ -40,12 +42,14 @@
 						<input type="password" class="form-control" id="pwd" name="pwd" placeholder="******" required/> 
 					</div>
 					<div class="form-group">
-						<label for="pwd-r">Repita Password:</label>
+						<label for="pwd-r">Repeat Password:</label>
 						<input type="password" class="form-control" id="pwd-r" name="pwd-r" placeholder="Repeat your password" required/>
 					</div>
-					<div class="text-center">
-						<button type="button" class="btn btn-success col-sm-6">Voltar</button>
-						<input type="submit" class="btn btn-success col-sm-6" value="Finalizar Cadastro">
+
+					<hr class="colorgraph">
+					<div class="row">
+						<div class="col-xs-12 col-md-6"><a href="index.php?page=login" class="btn btn-primary btn-block btn-lg">I have an account!</a></div>
+						<div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-success btn-block btn-lg" tabindex="7"></div>
 					</div>
 				</form>
 			</div>

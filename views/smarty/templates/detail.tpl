@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
-				{include file="nav.tpl" field1=$field1}
+			{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
 				
 			</div>
 		</div>
@@ -22,9 +22,10 @@
 	<section class="container margintop">
 		<div class="panel panel-default">
 			<div class="panel-body">
-						<h3>
-							{$product.name}
-						</h3>
+				<div id="added"></div>
+				<h3>
+					{$product.name}
+				</h3>
 				<div class="row">
 					<div class="col-md-8">
 						<img class="detail" alt="Bootstrap Image Preview" src="imgs/{$product.image_url}"/>
@@ -36,7 +37,8 @@
 						<h3>
 							{$product.price}€
 						</h3>
-						<select>
+						<div class="product-id hidden">{$product.id}</div>
+						<select class="quant">
 							<option value='1'>1</option>
 							<option value='2'>2</option>
 							<option value='3'>3</option>
@@ -48,7 +50,7 @@
 							<option value='9'>9</option>
 							<option value='10'>10</option>
 						</select>
-						<button type="button" class="btn btn-default">
+						<button type="button" class="addcart btn btn-default">
 							Add to Cart
 						</button>
 					</div>
@@ -58,5 +60,6 @@
 	</section>
 	<!-- footer -->
 	{include file="footer.tpl"}
+	<script src="js/handler.js"></script>
 </body>
 </html>

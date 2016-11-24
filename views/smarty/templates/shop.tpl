@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
-				{include file="nav.tpl"}
+			{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
 			</div>
 			<div class="row margintop">
 				<div class="col-md-12">
@@ -22,6 +22,7 @@
 						<h3>{$noresults}</h3>
 					{/if}
 				</div>
+				<div id="added"></div>
 				{foreach from=$products item=$product} 
 				<div class="col-md-3">
 					<div class="product-item">
@@ -33,8 +34,9 @@
 						</div>
 						<h3><a href="index.php?page=details&id={$product.id}">{$product.name}</a></h3>
 						<div class="pi-price">{$product.price}€</div>
-						<a href="index.php?page=details&id={$product.id}" class="btn add2cart">Add to cart</a>
-							<select class="add2cart">
+						<div class="product-id hidden">{$product.id}</div>
+						<a class="addcart btn add2cart">Add to cart</a>
+							<select class="quant add2cart">
 								<option value='1'>1</option>
 								<option value='2'>2</option>
 								<option value='3'>3</option>
@@ -45,15 +47,15 @@
 								<option value='8'>8</option>
 								<option value='9'>9</option>
 								<option value='10'>10</option>
-						</select>
+							</select>
 					</div>
 				</div>
 				{/foreach}
 			</div>
-			
 		</div>
 	</div>
 	<!-- footer -->
 	{include file="footer.tpl"}
+	<script src="js/handler.js"></script>
 </body>
 </html>

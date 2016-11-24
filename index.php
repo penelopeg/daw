@@ -1,29 +1,33 @@
 <?php
 
-
+session_start();
 include('helpers/requires.php');
 $smarty = new Smarty();
 
 $smarty->setTemplateDir('views/smarty/templates');
-$smarty->setCompileDir('views/smarty//templates_c');
+$smarty->setCompileDir('views/smarty/templates_c');
 $smarty->setCacheDir('views/smarty/cache');
 $smarty->setConfigDir('views/smarty/configs');
 
 include('helpers/load_menu.php');
-if (isset($_GET['page'])) {
-	if(isset($_SESSION['login'])) {
-		$smarty->assign('field1',array('name'=> "Logout", 'href' => 'index.php?page=logout'));
-		$smarty->assign('user_id',$_SESSION['login']['id']);
-		$smarty->assign('login',1);
-	}
-	else {
-		$smarty->assign('field1',array('name'=> "Login", 'href' => 'index.php?page=login'));
-		$smarty->assign('login',0);
-	}
-	
+if(isset($_SESSION['login'])) {
+	$smarty->assign('field1',array('name'=> "Logout", 'href' => 'index.php?page=logout'));
+	$smarty->assign('user_id',$_SESSION['login']['id']);
+	$smarty->assign('login',1);
+}
+else {
+	$smarty->assign('field1',array('name'=> "Login", 'href' => 'index.php?page=login'));
+	$smarty->assign('login',0);
+}
+
+if (isset($_GET['page'])) {	
 	$page = $_GET['page'];
 	switch ($page) {
 		case 'login':
+			if(isset($_GET['message'])){
+				$smarty->assign('message', $_GET['message']);
+				$smarty->assign('class', $_GET['class']);
+			}
 			include('controllers/login.php');
 			break;
 		case 'logout':
@@ -36,12 +40,14 @@ if (isset($_GET['page'])) {
 				$lastname = $_GET['lastname'];
 				$email = $_GET['email'];
 				$message = $_GET['message'];
+				$class = $_GET['class'];
 			}
 			else {
 				$firstname = "";
 				$lastname = "";
 				$email = "";
 				$message = "";
+				$class = "";
 			}
 			include('controllers/register.php');
 			break;
@@ -59,7 +65,7 @@ if (isset($_GET['page'])) {
 			break;
 
 		case 'cart':
-			include('controllers/cart.php');
+			header('location: cart.php');
 			break;
 
 		case 'order':
@@ -68,25 +74,16 @@ if (isset($_GET['page'])) {
 		case 'backoffice':
 			header('location: backoffice/index.php');
 			break;
+
+		case 'user':
+			include('controllers/user.php');
+			break;
 	}
 }
 else {
 	//index code
 	$products = Product::get_newest();
 	$smarty->assign('products', $products);
-
-	session_start();
-	if(isset($_SESSION['login']))
-	{
-		$smarty->assign('field1',array('name'=> "Logout", 'href' => 'index.php?page=logout'));
-		$smarty->assign('user_id',$_SESSION['login']['id']);
-		$smarty->assign('login',1);
-	}
-	else
-	{
-		$smarty->assign('field1',array('name'=> "Login", 'href' => 'index.php?page=login'));
-		$smarty->assign('login',0);
-	}
 	$smarty->display('index.tpl');
 	
 }

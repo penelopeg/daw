@@ -55,7 +55,7 @@ CREATE TABLE product (
 id INT(6) AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(30) NOT NULL,
 description VARCHAR(100),
-price INT (100) NOT NULL,
+price DECIMAL(10, 2) NOT NULL,
 image_url VARCHAR(100)
 );
 
@@ -115,10 +115,10 @@ INSERT INTO client (firstname, lastname, email, reg_date, password, address,city
 INSERT INTO client (firstname, lastname, email, reg_date, password, address,city_id, country_id, payment_info) VALUES ("Joao", "Do", "jodo@gmail.com", NOW(), "3b46bc68e71b92634a97ab3a0b01dbe4", "Rua das Pedras", 2, 2, "paypal");
 
 INSERT INTO product (name, description, price, image_url) VALUES ("Darth Vader Mug", "If you like your coffee on the dark side! Tea, Coffee & Hot Chocolate never looked so good!", 20, 'Darth-Vader-figural-mug.jpg');
-insert into product (name, description, price, image_url) values ('Harry Potter Triwizard Cup Lamp', 'For the victorious!', '29,99', 'triwizarcup.jpg');
-insert into product (name, description, price, image_url) values ('Star Wars R2-D2 Coffee Press', 'Beep bean bloop brew!', '39,99', 'r2d2_coffeepress.jpg');
-insert into product (name, description, price, image_url) values ('Marvel Groot USB Car Charger', "Groot dances while plugged in and turned on - he's sound activated!", '40', 'usbcharger_groot.jpg');
-insert into product (name, description, price, image_url) values ('Star Trek Delta Enamel Stud Earrings', "Made of sterling silver and hard enamel! Choose science blue, engineering red, or command gold", '94,95', 'startrek_earrings.jpg');
+insert into product (name, description, price, image_url) values ('Harry Potter Triwizard Cup Lamp', 'For the victorious!', 29.99, 'triwizarcup.jpg');
+insert into product (name, description, price, image_url) values ('Star Wars R2-D2 Coffee Press', 'Beep bean bloop brew!', 39.99, 'r2d2_coffeepress.jpg');
+insert into product (name, description, price, image_url) values ('Marvel Groot USB Car Charger', "Groot dances while plugged in and turned on - he's sound activated!", 40.99, 'usbcharger_groot.jpg');
+insert into product (name, description, price, image_url) values ('Star Trek Delta Enamel Stud Earrings', "Made of sterling silver and hard enamel! Choose science blue, engineering red, or command gold", 94.95, 'startrek_earrings.jpg');
 
 
 INSERT INTO product_2_categories (product_id, category_id) VALUES (1, 7);

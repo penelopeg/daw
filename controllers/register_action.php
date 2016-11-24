@@ -10,8 +10,9 @@
 		$pwd = $_POST['pwd'];
 		$pwdr = $_POST['pwd-r'];
 		if($pwd!=$pwdr){
-			$message = "As passwords não são iguais!";
-			header("location: index.php?page=register&message=".$message."&firstname=".$firstname."&lastname=".$lastname."&email=".$email);
+			$message = "Passwords don't match!";
+			$class = "alert alert-danger animated fadeInUp";
+			header("location: ../index.php?page=register&message=".$message."&class=".$class."&firstname=".$firstname."&lastname=".$lastname."&email=".$email);
 		}
 		else
 		{
@@ -19,11 +20,14 @@
 			$hashpwd = md5($pwd);
 			$client = Client::insert_client($firstname, $lastname, $email, $hashpwd);
 			if ($client != "duplicated") {
-				header("location: ../views/register_success.html");
+				$message = "Sign up was successful! Please login!";
+				$class ="has-success animated fadeInUp";
+				header("location: ../index.php?page=login&message=".$message."&class=");
 			}
 			else {
-				$message = "O email introduzido já se encontra registado!";
-				header("location: index.php?page=register&message=".$message."&firstname=".$firstname."&lastname=".$lastname."&email=".$email);
+				$message = "This email is already registered!";
+				$class = "alert alert-danger animated fadeInUp";
+				header("location: ../index.php?page=register&message=".$message."&class=".$class."&firstname=".$firstname."&lastname=".$lastname."&email=".$email);
 			}
 		}
 	}
