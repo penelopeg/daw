@@ -41,7 +41,7 @@
 			{if !empty($usermenu)}
 			<li>
 				<a href="{$usermenu.href}">
-					{$usermenu.name}
+					<span class="glyphicon glyphicon-cog"/>{$usermenu.name}
 				</a>
 			</li>
 			{else}

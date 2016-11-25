@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 18:17:36
+/* Smarty version 3.1.30, created on 2016-11-25 14:40:44
   from "/var/www/html/ecommerce_daw/views/smarty/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583720b0847537_77108849',
+  'unifunc' => 'content_58383f5cc12a18_46028186',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b082d58f3f0abab18256e1ff79bb9f5850e6387' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/index.tpl',
-      1 => 1480007531,
+      1 => 1480081217,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_583720b0847537_77108849 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58383f5cc12a18_46028186 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,9 +43,9 @@ function content_583720b0847537_77108849 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 	<div class="container-fluid">
-	<div class="row marginlogo">
-		<img src="imgs/logo.png"/>
-	</div>
+		<div class="row marginlogo">
+			<img src="imgs/logo.png"/>
+		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->

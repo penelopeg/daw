@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 17:09:30
+/* Smarty version 3.1.30, created on 2016-11-25 14:08:29
   from "/var/www/html/ecommerce_daw/views/smarty/templates/nav.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583710babd1e08_53752537',
+  'unifunc' => 'content_583837cdc73d67_63927887',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37648f2802b947ba81a6aad40cf8c6996f527b6f' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/nav.tpl',
-      1 => 1480003769,
+      1 => 1480079305,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583710babd1e08_53752537 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583837cdc73d67_63927887 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default navbar-fixed-top colornav" role="navigation">
 	<div class="navbar-header">
@@ -79,7 +79,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 			<li>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['usermenu']->value['href'];?>
 ">
-					<?php echo $_smarty_tpl->tpl_vars['usermenu']->value['name'];?>
+					<span class="glyphicon glyphicon-cog"/><?php echo $_smarty_tpl->tpl_vars['usermenu']->value['name'];?>
 
 				</a>
 			</li>

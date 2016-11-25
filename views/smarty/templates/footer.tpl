@@ -1,5 +1,5 @@
-<section class="container-fluid footer margintop">
-	<div class="row marginfooter">
+<div class="margintop container-fluid footer">
+	<div class="row footer marginfooter">
 		<div class="col-md-4">
 			<dl>
 				<dt class="titlebackground">
@@ -49,8 +49,11 @@
 		</div>
 	</div>
 
-	<div class="row links">
+	<div class="row links footer">
 		<p class="col-sm-6 titlebackground">© 2016 Desenvolvimento de Aplicações Web</p>
-		<p class="col-sm-6 text-right titlebackground">Designed by Penélope Gonçalves <span> <a href="index.php?page=backoffice" alt="Backoffice"><span class="glyphicon glyphicon-cog"></a></span></p>
+		<p class="col-sm-6 text-right titlebackground">Designed by Penélope Gonçalves
+		<a href="index.php?page=backoffice" alt="Backoffice"><span class="glyphicon glyphicon-cog">
+			</span></a>
+		</p>
 	</div>
-</section>
+</div>

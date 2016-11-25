@@ -3,6 +3,12 @@ body {
 	background: #f1f1f1;
 }
 
+.wrapper{
+  min-height: 100%;
+  position: relative;
+}
+
+
 .marginlogo {
 	margin-top:	55px;
 }
@@ -16,11 +22,6 @@ body {
 	margin-left: 50px;
 }
 
-.ratio {
-	height: 0;
-	width: 45%;
-}
-
 .hidden {
 	display:none;
 }
@@ -31,6 +32,7 @@ body {
 .links a:hover {
 	color: black !important;
 }
+
 
 /* details */
 .detail {
@@ -60,9 +62,6 @@ body {
 /*
 footer
 */
-.footer {
-	background-color: #111;
-}
 .marginfooter {
 	margin-top:	30px;
 }
@@ -70,6 +69,15 @@ footer
 	color: white;
 }
 
+.footer {
+	background-color: #111;
+}
+
+
+/* Client side menu */
+.status_color {
+	color: black !important
+}
 
 /*shop items */
 

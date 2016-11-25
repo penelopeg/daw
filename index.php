@@ -79,8 +79,11 @@ if (isset($_GET['page'])) {
 			header('location: backoffice/index.php');
 			break;
 
-		case 'user':
-			include('controllers/user.php');
+		case 'client_zone':
+			if (isset($_GET['sec'])) {
+				$sec = $_GET['sec'];
+			}
+			include('controllers/client_zone.php');
 			break;
 	}
 }

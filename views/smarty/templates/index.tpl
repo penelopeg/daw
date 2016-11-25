@@ -11,9 +11,9 @@
 </head>
 <body>
 	<div class="container-fluid">
-	<div class="row marginlogo">
-		<img src="imgs/logo.png"/>
-	</div>
+		<div class="row marginlogo">
+			<img src="imgs/logo.png"/>
+		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->

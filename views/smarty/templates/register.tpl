@@ -10,7 +10,8 @@
 	<script src="js/scripts.js"></script>
 </head>
 <body>
-	<div class="container-fluid">
+<div class="wrapper">
+	<div class="container-fluid body">
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
@@ -58,5 +59,6 @@
 	</div>
 	<!-- footer -->
 	{include file="footer.tpl"}
+	</div>
 </body>
 </html>

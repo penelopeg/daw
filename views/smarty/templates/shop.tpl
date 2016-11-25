@@ -14,13 +14,15 @@
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->
-			{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
+				{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
 			</div>
 			<div class="row margintop">
-			<div>{$message}</div>
+				{if isset($message)}
+				<div>{$message}</div>
+				{/if}
 				<div class="col-md-12">
 					{if isset($noresults)}
-						<h3>{$noresults}</h3>
+					<h3>{$noresults}</h3>
 					{/if}
 				</div>
 				<div id="added" class="has-success animated fadeInUp"></div>
@@ -37,18 +39,18 @@
 						<div class="pi-price">{$product.price}€</div>
 						<div class="product-id hidden">{$product.id}</div>
 						<a class="addcart btn add2cart">Add to cart</a>
-							<select class="quant add2cart">
-								<option value='1'>1</option>
-								<option value='2'>2</option>
-								<option value='3'>3</option>
-								<option value='4'>4</option>
-								<option value='5'>5</option>
-								<option value='6'>6</option>
-								<option value='7'>7</option>
-								<option value='8'>8</option>
-								<option value='9'>9</option>
-								<option value='10'>10</option>
-							</select>
+						<select class="quant add2cart">
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+							<option value='4'>4</option>
+							<option value='5'>5</option>
+							<option value='6'>6</option>
+							<option value='7'>7</option>
+							<option value='8'>8</option>
+							<option value='9'>9</option>
+							<option value='10'>10</option>
+						</select>
 					</div>
 				</div>
 				{/foreach}
