@@ -78,6 +78,13 @@ footer
 .status_color {
 	color: black !important
 }
+.hiddenRow {
+    padding: 0 !important;
+}
+
+.tableCollapse {
+	border-collapse:collapse;
+}
 
 /*shop items */
 

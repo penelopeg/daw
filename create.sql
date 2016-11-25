@@ -72,6 +72,7 @@ id INT(6) AUTO_INCREMENT PRIMARY KEY,
 client_id INT(6),
 order_date TIMESTAMP,
 status_id INT(6),
+total DECIMAL(10, 2),
 FOREIGN KEY (status_id) REFERENCES order_status(id),
 FOREIGN KEY (client_id) REFERENCES client(id)
 );
@@ -80,7 +81,7 @@ CREATE TABLE product_2_orders (
 order_id INT(6) NOT NULL,
 product_id INT(6) NOT NULL,
 quantity INT(100),
-price_total INT (100),
+price_total DECIMAL(10, 2),
 FOREIGN KEY (order_id) REFERENCES orders(id),
 FOREIGN KEY (product_id) REFERENCES product(id)
 );

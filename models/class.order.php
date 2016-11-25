@@ -7,7 +7,7 @@ class Order {
 
 	public function get_order($id) {
 		$res = select_query_assoc(
-			'SELECT id, client_id, order_date, status_id FROM orders WHERE id = ?', 
+			'SELECT id, client_id, order_date, status_id, total FROM orders WHERE id = ?', 
 			array($id)
 		);
 
@@ -26,7 +26,7 @@ class Order {
 	public function get_orders($client_id = 0){
 		//get orders of client
 		if (!empty($client_id)) {
-			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status FROM orders, order_status WHERE client_id = ? AND order_status.id = status_id';
+			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status, total FROM orders, order_status WHERE client_id = ? AND order_status.id = status_id';
 			$query_values = array($client_id);
 		}
 		//get all orders
