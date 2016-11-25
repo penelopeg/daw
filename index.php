@@ -58,6 +58,9 @@ if (isset($_GET['page'])) {
 			}
 			break;
 		case 'shop':
+			if(isset($_GET['message'])) {
+				$message = $_GET['message'];
+			}
 			if(isset($_GET['category_id'])) {
 				$category_id = $_GET['category_id'];
 			}

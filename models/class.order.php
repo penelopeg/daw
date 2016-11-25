@@ -7,7 +7,7 @@ class Order {
 
 	public function get_order($id) {
 		$res = select_query_assoc(
-			'SELECT id, client_id, order_date, status_id FROM order WHERE id = ?', 
+			'SELECT id, client_id, order_date, status_id FROM orders WHERE id = ?', 
 			array($id)
 		);
 
@@ -26,12 +26,12 @@ class Order {
 	public function get_orders($client_id = 0){
 		//get orders of client
 		if (!empty($client_id)) {
-			$query1 = 'SELECT id, client_id, order_date, status_id FROM order WHERE client_id = ?';
+			$query1 = 'SELECT id, client_id, order_date, status_id FROM orders WHERE client_id = ?';
 			$query_values = array($client_id);
 		}
 		//get all orders
 		else {
-			$query1 = 'SELECT id, client_id, order_date, status_id FROM order';
+			$query1 = 'SELECT id, client_id, order_date, status_id FROM orders';
 			$query_values = array();
 
 		}
@@ -50,23 +50,30 @@ class Order {
 		return $orders;
 	}
 
-	public function add_order($client_id, $status_id, $products) {
+	public function add_order($client_id, $status_id, $products = array()) {
 		execute_query(
-			'INSERT INTO order (client_id, order_date, status_id) VALUES (?, NOW(), ?)',
+			"INSERT INTO orders (client_id, order_date, status_id) VALUES (?, NOW(), ?)",
 			array($client_id, $status_id)
 		);
 		$id = last_insert_id();
-		foreach ($products as $product) {
-			execute_query(
-				'INSERT INTO product_2_orders (order_id, product_id, quantity, price_total) VALUES (?, ?, ?, ?)', 
-				array($id, $product['id'], $product['quantity'], $product['price_total'])
-			);
+		if ($id = last_insert_id()) {
+			foreach ($products as $product) {
+				execute_query(
+					'INSERT INTO product_2_orders (order_id, product_id, quantity, price_total) VALUES (?, ?, ?, ?)', 
+					array($id, $product['id'], $product['quantity'], $product['price_total'])
+				);
+			}
+			return true;
+		}
+		else {
+			return false;
 		}
 
 	}
+
 	public function change_order_status($order_id, $status_id) {
 		execute_query(
-			"UPDATE order SET status_id = ? WHERE id = ?", 
+			"UPDATE orders SET status_id = ? WHERE id = ?", 
 			array($status_id, $order_id)
 		);
 	}
@@ -75,9 +82,18 @@ class Order {
 		execute_query('DELETE FROM product_2_orders WHERE order_id = ?', array($id));
 
 		execute_query(
-			'DELETE FROM order WHERE id = ?',
+			'DELETE FROM orders WHERE id = ?',
 			array($id)
 		);
+	}
+
+
+	public function get_cities() {
+		return select_query_assoc('SELECT id, city_name FROM city');
+	}
+
+	public function get_countries() {
+		return select_query_assoc('SELECT id, country_name FROM country');
 	}
 }
 

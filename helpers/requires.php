@@ -4,5 +4,6 @@ include('functions.php');
 require('libs/Smarty.class.php');
 require('models/class.product.php');
 require('models/class.client.php');
+require('models/class.order.php');
 
 ?>

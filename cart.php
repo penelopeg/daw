@@ -21,7 +21,6 @@ else {
 	$smarty->assign('login',0);
 }
 
-
 $products = array();
 $total = 0;
 if(isset($_COOKIE['cart'])) {

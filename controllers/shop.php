@@ -9,6 +9,9 @@ if (isset($category_id)) {
 else {
 	$products = Product::get_products();
 }
+if(isset($message)) {
+	$smarty->assign('message', $message);
+}
 
 	$smarty->assign('products', $products);
 	$smarty->display('shop.tpl');

@@ -5,6 +5,7 @@ $('.addcart').click(function(event){
 		url: 'controllers/add_to_cart.php',
 		data: 'id='+id+'&quant='+quant,
 		success: function(data) {
+			$('#added').addClass("has-success animated fadeInUp");
 			$('#added').html(data);
 		}
 	});
@@ -22,5 +23,4 @@ $('.removecart').click(function(event){
 		}
 	});
 });
-
 

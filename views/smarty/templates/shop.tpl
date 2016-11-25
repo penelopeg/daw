@@ -17,6 +17,7 @@
 			{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
 			</div>
 			<div class="row margintop">
+			<div>{$message}</div>
 				<div class="col-md-12">
 					{if isset($noresults)}
 						<h3>{$noresults}</h3>

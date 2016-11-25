@@ -9,8 +9,7 @@ if(isset($_COOKIE['cart'])) {
 		if(array_key_exists($idProduct, $data))
 			unset($data[$idProduct]);
 }
-	setcookie('cart', json_encode($data), time()+3600, "/");
-	//echo "Removed from cart";
-	//header("Refresh:0; url=../index.php?page=cart");
+
+setcookie('cart', json_encode($data), time()+3600, "/");
 
 ?>

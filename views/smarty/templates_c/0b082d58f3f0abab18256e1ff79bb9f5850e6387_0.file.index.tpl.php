@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 11:58:52
+/* Smarty version 3.1.30, created on 2016-11-24 18:17:36
   from "/var/www/html/ecommerce_daw/views/smarty/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5836c7ec66e548_86924177',
+  'unifunc' => 'content_583720b0847537_77108849',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b082d58f3f0abab18256e1ff79bb9f5850e6387' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/index.tpl',
-      1 => 1479985130,
+      1 => 1480007531,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5836c7ec66e548_86924177 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583720b0847537_77108849 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,7 +43,7 @@ function content_5836c7ec66e548_86924177 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 	<div class="container-fluid">
-	<div class="row margintop">
+	<div class="row marginlogo">
 		<img src="imgs/logo.png"/>
 	</div>
 		<div class="row">
@@ -63,25 +63,9 @@ function content_5836c7ec66e548_86924177 (Smarty_Internal_Template $_smarty_tpl)
 					<div class="carousel-inner">
 						<div class="item active">
 							<img alt="Carousel Bootstrap First" src="imgs/slider/holiday.jpg">
-							<div class="carousel-caption">
-								<h4>
-									Get them before they run away
-								</h4>
-								<p>
-									New items are up!
-								</p>
-							</div>
 						</div>
 						<div class="item">
 							<img alt="Carousel Bootstrap Second" src="imgs/slider/lights.jpg">
-							<div class="carousel-caption">
-								<h4>
-									Geekin' out
-								</h4>
-								<p>
-									Fun geek gifts for everybody!
-								</p>
-							</div>
 						</div>
 					</div> <a class="left carousel-control" href="#carousel-173855" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-173855" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 				</div>
@@ -106,10 +90,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 							<h3><a href="index.php?page=details&id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
 </a></h3>
-							<div class="pi-price"><?php echo $_smarty_tpl->tpl_vars['product']->value['price'];?>
+						<div class="pi-price"><?php echo $_smarty_tpl->tpl_vars['product']->value['price'];?>
 €</div>
-							<a href="index.php?page=details&id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
-" class="addcart btn add2cart">Add to cart</a>
+						<div class="product-id hidden"><?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+</div>
+						<a class="addcart btn add2cart">Add to cart</a>
 							<select class="quant add2cart">
 								<option value='1'>1</option>
 								<option value='2'>2</option>

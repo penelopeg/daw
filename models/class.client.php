@@ -1,24 +1,13 @@
 <?php
 
 class Client {
-	private $id;
-	private $firstname;
-	private $lastname;
-	private $email;
-	private $reg_date;
-	private $password;
-	private $address;
-	private $city_id;
-	private $country_id;
-	private $payment_info;
-
 	public function __construct() {
 
 	}
 
-	protected function get_client($id) {
+	public function get_client($id) {
 		$res = select_query_assoc(
-			'SELECT firstname, lastname, email, reg_date, password, address, city_id, country_id, payment_info FROM client WHERE id = ?', 
+			'SELECT id, firstname, lastname, email, reg_date, password, address, city_id, country_id, payment_info FROM client WHERE id = ?', 
 			array($id)
 		);
 		if (!empty($res)) {

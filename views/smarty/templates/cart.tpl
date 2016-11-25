@@ -20,7 +20,7 @@
 	</div>
 	<div class="container margintop">
 		<div class="row">
-			<div class="col-sm-12 col-md-10 col-md-offset-1">
+			<div class="col-sm-12 col-md-10 col-md-offset-1 links">
 				<div id="removed"></div>
 				<table class="table table-hover">
 					<thead>
@@ -44,7 +44,7 @@
 								</div>
 							</td>
 							<td class="col-md-1" style="text-align: center">
-								<input type="email" class="form-control" id="exampleInputEmail1" value="{$product.quantity}">
+								<input type="number" class="form-control" id="quantity" value="{$product.quantity}">
 							</td>
 							<td class="col-md-1 text-center"><strong>{$product.price}€</strong></td>
 							<td class="col-md-1 text-center"><strong>{$product.total}€</strong></td>

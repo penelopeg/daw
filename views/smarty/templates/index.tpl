@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-	<div class="row margintop">
+	<div class="row marginlogo">
 		<img src="imgs/logo.png"/>
 	</div>
 		<div class="row">
@@ -29,25 +29,9 @@
 					<div class="carousel-inner">
 						<div class="item active">
 							<img alt="Carousel Bootstrap First" src="imgs/slider/holiday.jpg">
-							<div class="carousel-caption">
-								<h4>
-									Get them before they run away
-								</h4>
-								<p>
-									New items are up!
-								</p>
-							</div>
 						</div>
 						<div class="item">
 							<img alt="Carousel Bootstrap Second" src="imgs/slider/lights.jpg">
-							<div class="carousel-caption">
-								<h4>
-									Geekin' out
-								</h4>
-								<p>
-									Fun geek gifts for everybody!
-								</p>
-							</div>
 						</div>
 					</div> <a class="left carousel-control" href="#carousel-173855" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-173855" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 				</div>
@@ -63,8 +47,9 @@
 								</div>
 							</div>
 							<h3><a href="index.php?page=details&id={$product.id}">{$product.name}</a></h3>
-							<div class="pi-price">{$product.price}€</div>
-							<a href="index.php?page=details&id={$product.id}" class="addcart btn add2cart">Add to cart</a>
+						<div class="pi-price">{$product.price}€</div>
+						<div class="product-id hidden">{$product.id}</div>
+						<a class="addcart btn add2cart">Add to cart</a>
 							<select class="quant add2cart">
 								<option value='1'>1</option>
 								<option value='2'>2</option>

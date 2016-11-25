@@ -38,8 +38,8 @@ FOREIGN KEY (user_type_id) REFERENCES user_type(id)
 
 CREATE TABLE client (
 id INT(6) AUTO_INCREMENT PRIMARY KEY,
-firstname VARCHAR(30) NOT NULL,
-lastname VARCHAR(30) NOT NULL,
+firstname VARCHAR(50) NOT NULL,
+lastname VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
 reg_date TIMESTAMP,
 password VARCHAR(32) NOT NULL,
@@ -53,7 +53,7 @@ FOREIGN KEY (country_id) REFERENCES country(id)
 
 CREATE TABLE product (
 id INT(6) AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(30) NOT NULL,
+name VARCHAR(100) NOT NULL,
 description VARCHAR(100),
 price DECIMAL(10, 2) NOT NULL,
 image_url VARCHAR(100)

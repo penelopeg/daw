@@ -2,7 +2,7 @@
 	<div class="row marginfooter">
 		<div class="col-md-4">
 			<dl>
-				<dt>
+				<dt class="titlebackground">
 					About Geekin' Out
 				</dt>
 				<dd>
@@ -19,9 +19,9 @@
 				</dd>
 			</dl>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 links">
 			<dl>
-				<dt>
+				<dt class="titlebackground">
 					Vortex of links
 				</dt>
 				<p>
@@ -44,13 +44,13 @@
 		<div class="col-md-4">
 			 
 			<address>
-				 <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890
+				 <strong class="titlebackground">Geekin' Out, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890
 			</address>
 		</div>
 	</div>
 
-	<div class="row">
-		<p class="col-sm-6">© 2016 Desenvolvimento de Aplicações Web</p>
-		<p class="col-sm-6 text-right">Designed by Penélope Gonçalves <span> <a href="index.php?page=backoffice" alt="Backoffice"><span class="glyphicon glyphicon-cog"></a></span></p>
+	<div class="row links">
+		<p class="col-sm-6 titlebackground">© 2016 Desenvolvimento de Aplicações Web</p>
+		<p class="col-sm-6 text-right titlebackground">Designed by Penélope Gonçalves <span> <a href="index.php?page=backoffice" alt="Backoffice"><span class="glyphicon glyphicon-cog"></a></span></p>
 	</div>
 </section>

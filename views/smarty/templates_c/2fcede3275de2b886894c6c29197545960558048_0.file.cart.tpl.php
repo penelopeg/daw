@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 12:25:32
+/* Smarty version 3.1.30, created on 2016-11-24 20:06:51
   from "/var/www/html/ecommerce_daw/views/smarty/templates/cart.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5836ce2c4b53d8_79188074',
+  'unifunc' => 'content_58373a4b9bcc94_12089058',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2fcede3275de2b886894c6c29197545960558048' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/cart.tpl',
-      1 => 1479986721,
+      1 => 1480014359,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5836ce2c4b53d8_79188074 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58373a4b9bcc94_12089058 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,7 +54,7 @@ function content_5836ce2c4b53d8_79188074 (Smarty_Internal_Template $_smarty_tpl)
 	</div>
 	<div class="container margintop">
 		<div class="row">
-			<div class="col-sm-12 col-md-10 col-md-offset-1">
+			<div class="col-sm-12 col-md-10 col-md-offset-1 links">
 				<div id="removed"></div>
 				<table class="table table-hover">
 					<thead>
@@ -86,7 +86,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 								</div>
 							</td>
 							<td class="col-md-1" style="text-align: center">
-								<input type="email" class="form-control" id="exampleInputEmail1" value="<?php echo $_smarty_tpl->tpl_vars['product']->value['quantity'];?>
+								<input type="number" class="form-control" id="quantity" value="<?php echo $_smarty_tpl->tpl_vars['product']->value['quantity'];?>
 ">
 							</td>
 							<td class="col-md-1 text-center"><strong><?php echo $_smarty_tpl->tpl_vars['product']->value['price'];?>

@@ -3,6 +3,10 @@ body {
 	background: #f1f1f1;
 }
 
+.marginlogo {
+	margin-top:	55px;
+}
+
 .margintop {
 	margin-top:	80px;
 }
@@ -21,6 +25,13 @@ body {
 	display:none;
 }
 
+.links a {
+	color: #e84d1c !important;
+}
+.links a:hover {
+	color: black !important;
+}
+
 /* details */
 .detail {
 	max-width: 50%;
@@ -33,6 +44,19 @@ body {
 	margin-right: 10px;
 	margin-left: 10px;
 }
+
+.colornav {
+	background: #cfcfcf;
+}
+
+.colorlinks a {
+	color: black !important;
+}
+
+.colorlinks a:hover {
+	color:#e84d1c !important;
+}
+
 /*
 footer
 */
@@ -41,6 +65,9 @@ footer
 }
 .marginfooter {
 	margin-top:	30px;
+}
+.titlebackground {
+	color: white;
 }
 
 

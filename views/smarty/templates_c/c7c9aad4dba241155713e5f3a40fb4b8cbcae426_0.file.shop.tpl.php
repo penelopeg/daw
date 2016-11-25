@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 11:27:51
+/* Smarty version 3.1.30, created on 2016-11-25 12:10:31
   from "/var/www/html/ecommerce_daw/views/smarty/templates/shop.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5836c0a7f0fe74_83879290',
+  'unifunc' => 'content_58381c2799aba6_63114339',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c7c9aad4dba241155713e5f3a40fb4b8cbcae426' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/shop.tpl',
-      1 => 1479983268,
+      1 => 1480071919,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5836c0a7f0fe74_83879290 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58381c2799aba6_63114339 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,6 +51,8 @@ function content_5836c0a7f0fe74_83879290 (Smarty_Internal_Template $_smarty_tpl)
 
 			</div>
 			<div class="row margintop">
+			<div><?php echo $_smarty_tpl->tpl_vars['message']->value;?>
+</div>
 				<div class="col-md-12">
 					<?php if (isset($_smarty_tpl->tpl_vars['noresults']->value)) {?>
 						<h3><?php echo $_smarty_tpl->tpl_vars['noresults']->value;?>
