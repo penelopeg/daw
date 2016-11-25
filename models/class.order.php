@@ -26,12 +26,12 @@ class Order {
 	public function get_orders($client_id = 0){
 		//get orders of client
 		if (!empty($client_id)) {
-			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status, total FROM orders, order_status WHERE client_id = ? AND order_status.id = status_id';
+			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status, total FROM orders, order_status WHERE client_id = ? AND order_status.id = status_id ORDER BY order_date';
 			$query_values = array($client_id);
 		}
 		//get all orders
 		else {
-			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status FROM orders WHERE order_status.id = status_id';
+			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status FROM orders WHERE order_status.id = status_id ORDER BY order_date';
 			$query_values = array();
 
 		}
@@ -50,10 +50,10 @@ class Order {
 		return $orders;
 	}
 
-	public function add_order($client_id, $status_id, $products = array()) {
+	public function add_order($client_id, $total, $status_id, $products = array()) {
 		execute_query(
-			"INSERT INTO orders (client_id, order_date, status_id) VALUES (?, NOW(), ?)",
-			array($client_id, $status_id)
+			"INSERT INTO orders (client_id, order_date, status_id, total) VALUES (?, NOW(), ?, ?)",
+			array($client_id, $status_id, $total)
 		);
 		$id = last_insert_id();
 		if ($id = last_insert_id()) {
