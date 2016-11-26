@@ -30,9 +30,15 @@ function select_query_num($query, $values = array()) {
 }
 
 function execute_query($query, $values = array()) {
-	global $pdo;
-	$stmt = $pdo->prepare($query);
-	$stmt->execute($values);
+	try {
+		global $pdo;
+		$stmt = $pdo->prepare($query);
+		$stmt->execute($values);
+
+		return "sucessful";		
+	}catch (Exception $e){
+		return $e->getMessage();
+	}
 }
 
 function last_insert_id() {

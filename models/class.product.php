@@ -17,10 +17,18 @@ class Product {
 
 	public function update_product($id, $name, $description, $price, $image_url) {
 		execute_query(
-			'UPDATE product SET name = ?, description = ?, price = ?, $image_url WHERE id = ?',
+			'UPDATE product SET name = ?, description = ?, price = ?, image_url = ? WHERE id = ?',
 			array($name, $description, $price, $image_url, $id)
 		);
 	}
+
+	public function update_product_no_img($id, $name, $description, $price) {
+		execute_query(
+			'UPDATE product SET name = ?, description = ?, price = ? WHERE id = ?',
+			array($name, $description, $price, $id)
+		);
+	}
+
 
 	public function add_category_2_product($product_id, $category_id) {
 		if (empty(select_query_assoc ('SELECT id FROM product_2_categories WHERE product_id = ? AND category_id = ?', array($product_id, $category_id)))) {

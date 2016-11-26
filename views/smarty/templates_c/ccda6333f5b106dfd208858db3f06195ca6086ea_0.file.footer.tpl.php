@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 21:37:40
+/* Smarty version 3.1.30, created on 2016-11-25 18:04:35
   from "/var/www/html/daw/views/smarty/templates/backoffice/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835fe14b3a422_22524019',
+  'unifunc' => 'content_58386f23588806_66512257',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ccda6333f5b106dfd208858db3f06195ca6086ea' => 
     array (
       0 => '/var/www/html/daw/views/smarty/templates/backoffice/footer.tpl',
-      1 => 1479933459,
+      1 => 1480093440,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5835fe14b3a422_22524019 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58386f23588806_66512257 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 	
 	<div class="footer-bottom">
@@ -40,6 +40,9 @@ function content_5835fe14b3a422_22524019 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 	</div>
 	</div>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="../js/backoffice/handler.js"><?php echo '</script'; ?>
+>
 </body>
 </html><?php }
 }

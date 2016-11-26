@@ -59,8 +59,8 @@ html,body{
     margin: 10px auto 30px;
     border-radius: 100%;
     border: 2px solid #aaa;
-    background-size: cover;
     background-image: url('../imgs/logo_backoffice.png');
+    background-size: 100% 100%;
 }
 
 .form-box input{
@@ -150,6 +150,12 @@ html,body{
     padding-top: 0px;
 }
 
+.navbar-logo{
+  margin-top: -10px;
+  height: 40px;
+  width: auto;
+}
+
 .icon-size
 {
     font-size: 87px;
@@ -164,7 +170,8 @@ html,body{
   position: relative;
   height: 100%;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 60px;
+  padding-left: 10px;
 }
 
 .body img{
@@ -199,4 +206,61 @@ body h1{
 }
 .design a {
     color: #fff;
+}
+
+.centered-form{
+  margin-top: 60px;
+}
+
+.centered-form .panel{
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.clickable-row{
+  cursor: pointer;
+}
+
+.clickable-row-border{
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+}
+
+textarea{
+  resize: none;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.ox{
+  overflow-x: hidden;
+}
+
+.message{
+  top: 80px;
+  left: 40%;
+  position: absolute;
+  width: 300px;
+  color: black;
+  z-index: 1000;
+  text-align: center;
+}
+
+.hidden{
+  display: none;
 }

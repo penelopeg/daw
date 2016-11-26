@@ -38,6 +38,14 @@ class User {
 			);
 	}
 
+	public function update_user_by_email($user_type_id, $firstname, $lastname, $email, $password, $oldEmail) {
+			$result = execute_query(
+				'UPDATE user SET user_type_id = ?, firstname = ?, lastname = ?, email = ?, password = ? WHERE email = ?',
+				array($user_type_id, $firstname, $lastname, $email, $password, $oldEmail)
+			);
+
+			return $result;
+	}
 
 	public function delete_user($id) {
 		execute_query(
@@ -47,7 +55,7 @@ class User {
 	}
 
 	public function get_users() {
-		return select_query_assoc('SELECT * from users');
+		return select_query_assoc('SELECT user.*, user_type.type from user, user_type WHERE user.user_type_id = user_type.id');
 	}
 
 	public function check_user($email, $password) {

@@ -16,5 +16,6 @@
 		</div>
 	</div>
 	</div>
+	<script type="text/javascript" src="../js/backoffice/handler.js"></script>
 </body>
 </html>

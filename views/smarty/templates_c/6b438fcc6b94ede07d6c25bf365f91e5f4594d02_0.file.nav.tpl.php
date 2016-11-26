@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 15:55:34
+/* Smarty version 3.1.30, created on 2016-11-25 16:34:11
   from "/var/www/html/daw/views/smarty/templates/nav.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5836ff661c92e0_65524668',
+  'unifunc' => 'content_583859f385f2f1_89065043',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6b438fcc6b94ede07d6c25bf365f91e5f4594d02' => 
     array (
       0 => '/var/www/html/daw/views/smarty/templates/nav.tpl',
-      1 => 1479999203,
+      1 => 1480088022,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5836ff661c92e0_65524668 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583859f385f2f1_89065043 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top colornav" role="navigation">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 		</button> <a class="navbar-brand" href="index.php"><img src="imgs/logo_thumb.png"/></a>
 	</div>
 	
-	<div class="collapse navbar-collapse marginnav" id="bs-example-navbar-collapse-1">
+	<div class="colorlinks collapse navbar-collapse marginnav"  id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
-			<li class="active">
+			<li class="">
 				<a href="#">Sales!</a>
 			</li>
 			<li class="dropdown">
@@ -79,7 +79,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 			<li>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['usermenu']->value['href'];?>
 ">
-					<?php echo $_smarty_tpl->tpl_vars['usermenu']->value['name'];?>
+					<span class="glyphicon glyphicon-cog"/><?php echo $_smarty_tpl->tpl_vars['usermenu']->value['name'];?>
 
 				</a>
 			</li>

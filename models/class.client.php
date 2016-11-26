@@ -52,7 +52,7 @@ class Client {
 	}
 
 	public function get_clients() {
-		return select_query_assoc('SELECT * from clients');
+		return select_query_assoc('SELECT client.*, city.city_name, country.country_name FROM client, city, country WHERE client.city_id = city.id AND client.country_id = country.id');
 	}
 
 	public function check_client($email, $password) {

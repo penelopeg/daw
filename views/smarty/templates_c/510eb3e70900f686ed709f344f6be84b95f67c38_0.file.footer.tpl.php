@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 15:55:34
+/* Smarty version 3.1.30, created on 2016-11-25 16:34:11
   from "/var/www/html/daw/views/smarty/templates/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5836ff661ce238_76777119',
+  'unifunc' => 'content_583859f3874cf7_21005910',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '510eb3e70900f686ed709f344f6be84b95f67c38' => 
     array (
       0 => '/var/www/html/daw/views/smarty/templates/footer.tpl',
-      1 => 1479999203,
+      1 => 1480088022,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5836ff661ce238_76777119 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583859f3874cf7_21005910 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<section class="container-fluid footer margintop">
-	<div class="row marginfooter">
+<div class="margintop container-fluid footer">
+	<div class="row footer marginfooter">
 		<div class="col-md-4">
 			<dl>
-				<dt>
+				<dt class="titlebackground">
 					About Geekin' Out
 				</dt>
 				<dd>
@@ -43,9 +43,9 @@ function content_5836ff661ce238_76777119 (Smarty_Internal_Template $_smarty_tpl)
 				</dd>
 			</dl>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 links">
 			<dl>
-				<dt>
+				<dt class="titlebackground">
 					Vortex of links
 				</dt>
 				<p>
@@ -68,14 +68,17 @@ function content_5836ff661ce238_76777119 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="col-md-4">
 			 
 			<address>
-				 <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890
+				 <strong class="titlebackground">Geekin' Out, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890
 			</address>
 		</div>
 	</div>
 
-	<div class="row">
-		<p class="col-sm-6">© 2016 Desenvolvimento de Aplicações Web</p>
-		<p class="col-sm-6 text-right">Designed by Penélope Gonçalves <span> <a href="index.php?page=backoffice" alt="Backoffice"><span class="glyphicon glyphicon-cog"></a></span></p>
+	<div class="row links footer">
+		<p class="col-sm-6 titlebackground">© 2016 Desenvolvimento de Aplicações Web</p>
+		<p class="col-sm-6 text-right titlebackground">Designed by Penélope Gonçalves
+		<a href="index.php?page=backoffice" alt="Backoffice"><span class="glyphicon glyphicon-cog">
+			</span></a>
+		</p>
 	</div>
-</section><?php }
+</div><?php }
 }
