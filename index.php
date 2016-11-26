@@ -10,6 +10,7 @@ $smarty->setCacheDir('views/smarty/cache');
 $smarty->setConfigDir('views/smarty/configs');
 
 include('helpers/load_menu.php');
+
 if(isset($_SESSION['login'])) {
 	$smarty->assign('field1',array('name'=> "Logout", 'href' => 'index.php?page=logout'));
 	$smarty->assign('user_id',$_SESSION['login']['id']);
@@ -27,37 +28,30 @@ if (isset($_GET['page'])) {
 	$page = $_GET['page'];
 	switch ($page) {
 		case 'login':
-			$redirect = "";
-			if(isset($_GET['redirect'])) {
-				$redirect = "?redirect=" . $_GET['redirect'];
-			}
-			include('controllers/login.php');
+			$redirect = isset($_GET['redirect']) ? "?redirect=" . $_GET['redirect'] : '';
+			$smarty->assign('redirect', $redirect);
+			$smarty->assign('field2',array('name'=> "Sign Up", 'href' => 'index.php?page=register'));
+			$smarty->display('login.tpl');
 			break;
 		case 'logout':
 			include('controllers/logout.php');
 			break;
 		case 'register':
-			if(isset($_GET['alert']))
-			{
-				$firstname = $_GET['firstname'];
-				$lastname = $_GET['lastname'];
-				$email = $_GET['email'];
-				$message = $_GET['message'];
-				$class = $_GET['class'];
-			}
-			else {
-				$firstname = "";
-				$lastname = "";
-				$email = "";
-				$message = "";
-				$class = "";
-			}
-			include('controllers/register.php');
+			$firstname = isset($_GET['firstname']) ? $_GET['firstname'] : "";
+			$lastname = isset($_GET['lastname']) ? $_GET['lastname'] : "";
+			$email = isset($_GET['email']) ? $_GET['email'] : "";
+			
+			$smarty->assign('firstname', $firstname);
+			$smarty->assign('lastname', $lastname);
+			$smarty->assign('email', $email);
+			$smarty->display('register.tpl');
 			break;
 		case 'details':
 			if(isset($_GET['id'])) {
 				$product_id = $_GET['id'];
-				include('controllers/details.php');
+				$product = Product::get_product($product_id);
+				$smarty->assign('product', $product);
+				$smarty->display('detail.tpl');
 			}
 			break;
 		case 'shop':
@@ -84,6 +78,16 @@ if (isset($_GET['page'])) {
 				$sec = $_GET['sec'];
 			}
 			include('controllers/client_zone.php');
+			break;
+
+		case 'about':
+		$smarty->display('about.tpl');
+			break;
+
+		case 'contact':
+			break;
+
+		default:
 			break;
 	}
 }

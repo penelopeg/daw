@@ -10,7 +10,6 @@
 	<script src="js/scripts.js"></script>
 </head>
 <body>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

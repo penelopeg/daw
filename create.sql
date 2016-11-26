@@ -1,5 +1,3 @@
-## ADD COUNTRY TO CLIENT, ADD CREDIT CARD NUMBER ????
-
 CREATE TABLE user_type (
 id INT(6) AUTO_INCREMENT PRIMARY KEY,
 type VARCHAR(30) NOT NULL
@@ -41,7 +39,7 @@ id INT(6) AUTO_INCREMENT PRIMARY KEY,
 firstname VARCHAR(50) NOT NULL,
 lastname VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
-reg_date TIMESTAMP,
+reg_date Datetime,
 password VARCHAR(32) NOT NULL,
 address VARCHAR(100),
 city_id INT(6),
@@ -57,6 +55,7 @@ name VARCHAR(100) NOT NULL,
 description VARCHAR(100),
 price DECIMAL(10, 2) NOT NULL,
 image_url VARCHAR(100)
+available TINYINT(1)
 );
 
 CREATE TABLE product_2_categories (
@@ -70,7 +69,7 @@ FOREIGN KEY (product_id) REFERENCES product(id)
 CREATE TABLE orders (
 id INT(6) AUTO_INCREMENT PRIMARY KEY,
 client_id INT(6),
-order_date TIMESTAMP,
+order_date Datetime,
 status_id INT(6),
 total DECIMAL(10, 2),
 FOREIGN KEY (status_id) REFERENCES order_status(id),

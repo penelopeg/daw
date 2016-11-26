@@ -13,7 +13,7 @@ elseif (isset($search_key)) {
 	}	
 }
 else {
-	$products = Product::get_products();
+	$products = Product::get_products_search("");
 }
 
 $smarty->assign('products', $products);

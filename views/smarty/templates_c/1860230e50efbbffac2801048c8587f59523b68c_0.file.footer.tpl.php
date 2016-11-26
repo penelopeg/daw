@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-26 12:07:36
+/* Smarty version 3.1.30, created on 2016-11-26 23:25:29
   from "/var/www/html/ecommerce_daw/views/smarty/templates/backoffice/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58396cf87bb2c2_84126996',
+  'unifunc' => 'content_583a0bd96d6360_91899201',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1860230e50efbbffac2801048c8587f59523b68c' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/backoffice/footer.tpl',
-      1 => 1480158430,
+      1 => 1480199115,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58396cf87bb2c2_84126996 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a0bd96d6360_91899201 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-	
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="row">
@@ -33,7 +32,7 @@ function content_58396cf87bb2c2_84126996 (Smarty_Internal_Template $_smarty_tpl)
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 					<div class="design">
-					<a href="#">My Company </a> |  <a target="_blank" href="http://www.jordao.xyz">Web Design & Development by Gustavo Jordão</a>
+					<a target="_blank" href="https://penelopeg.github.io/">Developed by Penélope Gonçalves</a>
 					</div>
 				</div>
 			</div>

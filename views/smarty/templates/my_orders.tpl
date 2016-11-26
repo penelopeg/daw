@@ -18,7 +18,7 @@
 			{elseif $data.order.status_id == 2}
 				<td><span class="label label-warning">{$data.order.status}</span></td>
 			{elseif $data.order.status_id == 3}
-				<td><span class="label label-important">{$data.order.status}</span></td>
+				<td><span class="label label-primary">{$data.order.status}</span></td>
 			{else}
 				<td><span class="label label-success">{$data.order.status}</span></td>
 			{/if}

@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="../imgs/logo_backoffice.ico">
+	<link rel="icon" href="../imgs/logos/logo_backoffice.ico">
 	<title>Backoffice</title>
 </head>
 <body>
@@ -30,6 +30,15 @@
 					<ul class="dropdown-menu">
 						<li><a href="index.php?page=addProd">Add Product</a></li>
 						<li><a href="index.php?page=editProd">Edit Product</a></li>
+					</ul>
+				</li>
+				<li class="dropdown {if $page=='addProdCat'} active {/if}">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Categories
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="index.php?page=addProdCat">Add Product Categories</a></li>
 					</ul>
 				</li>
 				{if $user=='admin'}
@@ -60,10 +69,7 @@
 							<div class="navbar-login">
 								<div class="row">
 									<div class="col-lg-12">
-										<p class="text-left small">{$email}</p>
-										<p class="text-left">
-											<a href="#" class="btn btn-primary btn-block btn-sm">Update Settings</a>
-										</p>
+										<p class="text-left small">Welcome {$email}</p>
 									</div>
 								</div>
 							</div>

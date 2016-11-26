@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-26 12:07:48
+/* Smarty version 3.1.30, created on 2016-11-26 23:27:30
   from "/var/www/html/ecommerce_daw/views/smarty/templates/backoffice/editProd.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58396d04744747_20303586',
+  'unifunc' => 'content_583a0c5249b588_44789433',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2ce23c0da2475a9f9fdde8c8e2f6c655f7013b6' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/backoffice/editProd.tpl',
-      1 => 1480158430,
+      1 => 1480199244,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58396d04744747_20303586 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a0c5249b588_44789433 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 	<div class="body row">
 		<div class="col-md-6">
@@ -29,6 +29,7 @@ function content_58396d04744747_20303586 (Smarty_Internal_Template $_smarty_tpl)
 				<th>Price</th>
 				<th>Description</th>
 				<th>Image</th>
+				<th>Available</th>
 				<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['prods']->value, 'prod');
 if ($_from !== null) {
@@ -46,6 +47,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['prod']->value) {
 </a></td>
 						<td class="hidden"><?php echo $_smarty_tpl->tpl_vars['prod']->value['id'];?>
 </td>
+						<td><?php if ($_smarty_tpl->tpl_vars['prod']->value['available'] == 1) {?>Yes<?php } else { ?>No<?php }?></td>
 					</tr>
 				<?php
 }
@@ -74,7 +76,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 										</div>
 										<div class="col-xs-6 col-sm-6 col-md-6">
 											<div class="form-group">
-												<input type="number" name="price" id="price" class="form-control input-sm" placeholder="Price" required/>
+												<input type="number" name="price" id="price" class="form-control input-sm" placeholder="Price" step="0.01" required/>
 											</div>
 										</div>
 									</div>
@@ -82,13 +84,40 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 										<textarea name="description" id="description" class="form-control input-sm" placeholder="Description" required></textarea>
 									</div>
 									<div class="row">
-										<div class="col-xs-12 col-sm-12 col-md-12">
+										<div class="col-xs-6 col-sm-6 col-md-6">
 											<div class="form-group fileUpload btn btn-default">
 												<span>Upload Image</span>
 												<input type="file" value="Add" name="img" id="img" class="upload"/>
 											</div>
 										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6">
+											<div class="form-group">
+												<input type="checkbox" value="Available" name="available" id="available"/>
+												<span>Available</span>
+											</div>
+										</div>							
 									</div>
+									<!--<div class="row">
+										<div class="col-xs-12 col-sm-12 col-md-12">
+											<label>Product Categories</label>
+											<div class="form-group checkbox-container">
+												<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['cats']->value, 'cat');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['cat']->value) {
+?>
+												<input type="checkbox" name="category[<?php echo $_smarty_tpl->tpl_vars['cat']->value['id'];?>
+]"/><?php echo $_smarty_tpl->tpl_vars['cat']->value['category'];?>
+<br/>
+												<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+											</div>
+										</div>
+									</div>-->
 									<input type="submit" value="Edit" class="btn btn-info btn-block">
 								</form>
 							</div>

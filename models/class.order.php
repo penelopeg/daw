@@ -26,14 +26,13 @@ class Order {
 	public function get_orders($client_id = 0){
 		//get orders of client
 		if (!empty($client_id)) {
-			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status, total FROM orders, order_status WHERE client_id = ? AND order_status.id = status_id ORDER BY order_date';
+			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status, total FROM orders, order_status WHERE client_id = ? AND order_status.id = status_id ORDER BY order_date, orders.id';
 			$query_values = array($client_id);
 		}
 		//get all orders
 		else {
-			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status FROM orders WHERE order_status.id = status_id ORDER BY order_date';
+			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status, total FROM orders, order_status WHERE order_status.id = status_id ORDER BY order_date, orders.id';
 			$query_values = array();
-
 		}
 		$res = select_query_assoc($query1, $query_values);
 		$orders = array();
@@ -42,9 +41,16 @@ class Order {
 				'SELECT product_id, quantity, price_total, product.name, product.price FROM product_2_orders, product WHERE order_id = ? AND product.id = product_id', 
 				array($row['id'])
 			);
+
+			$client = select_query_assoc(
+				"SELECT id, firstname, lastname, email FROM client WHERE id = ?",
+				array($row['client_id'])
+			)[0];
+
 			$orders[] = array(
 				"order" => $row,
-				"products" => $products_data
+				"products" => $products_data,
+				"client" => $client
 			);
 		}
 		return $orders;
@@ -94,6 +100,10 @@ class Order {
 
 	public function get_countries() {
 		return select_query_assoc('SELECT id, country_name FROM country');
+	}
+
+	public function get_status() {
+		return select_query_assoc('SELECT id, status FROM order_status');
 	}
 }
 

@@ -15,7 +15,6 @@
 			<div class="col-md-12">
 				<!-- Navigation menu -->
 			{include file="nav.tpl" field1=$field1 product_categories=$product_categories usermenu=$usermenu}
-				
 			</div>
 		</div>
 	</div>

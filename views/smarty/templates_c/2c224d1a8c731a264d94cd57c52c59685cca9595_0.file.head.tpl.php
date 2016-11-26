@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-26 12:07:36
+/* Smarty version 3.1.30, created on 2016-11-27 00:24:03
   from "/var/www/html/ecommerce_daw/views/smarty/templates/backoffice/head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58396cf87356d6_98221963',
+  'unifunc' => 'content_583a1993cbb492_33329248',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2c224d1a8c731a264d94cd57c52c59685cca9595' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/backoffice/head.tpl',
-      1 => 1480158430,
+      1 => 1480202199,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58396cf87356d6_98221963 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a1993cbb492_33329248 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +35,7 @@ function content_58396cf87356d6_98221963 (Smarty_Internal_Template $_smarty_tpl)
  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="../imgs/logo_backoffice.ico">
+	<link rel="icon" href="../imgs/logos/logo_backoffice.ico">
 	<title>Backoffice</title>
 </head>
 <body>
@@ -59,6 +59,15 @@ function content_58396cf87356d6_98221963 (Smarty_Internal_Template $_smarty_tpl)
 					<ul class="dropdown-menu">
 						<li><a href="index.php?page=addProd">Add Product</a></li>
 						<li><a href="index.php?page=editProd">Edit Product</a></li>
+					</ul>
+				</li>
+				<li class="dropdown <?php if ($_smarty_tpl->tpl_vars['page']->value == 'addProdCat') {?> active <?php }?>">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Categories
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="index.php?page=addProdCat">Add Product Categories</a></li>
 					</ul>
 				</li>
 				<?php if ($_smarty_tpl->tpl_vars['user']->value == 'admin') {?>
@@ -90,11 +99,8 @@ function content_58396cf87356d6_98221963 (Smarty_Internal_Template $_smarty_tpl)
 							<div class="navbar-login">
 								<div class="row">
 									<div class="col-lg-12">
-										<p class="text-left small"><?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+										<p class="text-left small">Welcome <?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 </p>
-										<p class="text-left">
-											<a href="#" class="btn btn-primary btn-block btn-sm">Update Settings</a>
-										</p>
 									</div>
 								</div>
 							</div>
