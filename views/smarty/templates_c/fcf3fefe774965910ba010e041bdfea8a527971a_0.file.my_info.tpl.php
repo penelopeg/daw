@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 15:01:05
+/* Smarty version 3.1.30, created on 2016-11-26 13:04:46
   from "/var/www/html/ecommerce_daw/views/smarty/templates/my_info.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58384421538547_01198459',
+  'unifunc' => 'content_58397a5eb7f8b3_88828602',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fcf3fefe774965910ba010e041bdfea8a527971a' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/my_info.tpl',
-      1 => 1480082464,
+      1 => 1480160700,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58384421538547_01198459 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58397a5eb7f8b3_88828602 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h2 id="title">My Information</h2>
 <form method="post" action="controllers/save_action.php">
@@ -40,16 +40,12 @@ function content_58384421538547_01198459 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="form-group">
 			<label for="email">Email:</label>
 			<input type="email" class="form-control" id="email" name="email" placeholder="Input your email" value="<?php echo $_smarty_tpl->tpl_vars['client']->value['email'];?>
-" required/>
-		</div>
-		<!--<div class="form-group">
-			<label for="pwd">Password:</label>
-			<input type="password" class="form-control" id="pwd" name="pwd" placeholder="******" required/> 
+" disabled/>
 		</div>
 		<div class="form-group">
-			<label for="pwd-r">Repeat Password:</label>
-			<input type="password" class="form-control" id="pwd-r" name="pwd-r" placeholder="Repeat your password" required/>
-		</div>-->
+			<label for="pwd">New Password:</label>
+			<input type="password" class="form-control" id="pwd" name="pwd" placeholder="******"/> 
+		</div>
 		<hr class="colorgraph">
 		<div class="row">
 			<div class="col-xs-12 col-md-6"><input type="submit" value="Save" class="btn btn-success btn-block btn-lg" tabindex="7"></div>

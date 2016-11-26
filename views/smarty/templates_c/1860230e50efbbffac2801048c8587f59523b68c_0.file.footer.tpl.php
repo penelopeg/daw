@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 00:08:51
+/* Smarty version 3.1.30, created on 2016-11-26 12:07:36
   from "/var/www/html/ecommerce_daw/views/smarty/templates/backoffice/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5836218390f313_14864648',
+  'unifunc' => 'content_58396cf87bb2c2_84126996',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1860230e50efbbffac2801048c8587f59523b68c' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/backoffice/footer.tpl',
-      1 => 1479942506,
+      1 => 1480158430,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5836218390f313_14864648 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58396cf87bb2c2_84126996 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 	
 	<div class="footer-bottom">
@@ -40,6 +40,9 @@ function content_5836218390f313_14864648 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 	</div>
 	</div>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="../js/backoffice/handler.js"><?php echo '</script'; ?>
+>
 </body>
 </html><?php }
 }

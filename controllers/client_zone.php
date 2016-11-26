@@ -22,6 +22,7 @@ if (isset($_SESSION['login'])) {
 	$smarty->display('client_zone.tpl');
 }
 else {
-	echo "not logged in";
+	echo "not logged in!";
+	header("refresh:1;url=index.php");
 }
 ?>

@@ -22,11 +22,8 @@
 			<div class="col-sm-4 col-sm-push-4">
 				<div class="panel panel-default">
 					<div class="panel-body">
-					{if isset($class)}
-	        			<div id="output" class="{$class}">{$message}</div>
-	        		{/if}
 						<h2>Login</h2>
-						<form method="post" action="controllers/login_action.php">
+						<form method="post" action="controllers/login_action.php{$redirect}">
 							<div class="form-group">
 								 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
 							</div>

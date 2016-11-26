@@ -8,14 +8,18 @@
 		$password = $_POST['pwd'];
 		if(!($user = Client::check_client($email, md5($password)))) {
 			$message = "Wrong email/password!";
-			$class = "alert alert-danger animated fadeInUp";
-			header("location: ../index.php?page=login&message=$message&class=$class");
+			header("location: ../index.php?page=login&alert=$message");
 		}
 		else{
 			session_start();
 			$_SESSION['login']=$user;
-			header('location: ../index.php');
-			echo $user['id'];
+			if (isset($_GET['redirect'])) {
+				header('location: ../index.php?page=order');
+			}
+			else {
+				$message = "Welcome " . $user['firstname'];
+				header("location: ../index.php?alert=$message");
+			}
 		}
 	}
 	else

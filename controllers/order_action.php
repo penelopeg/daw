@@ -22,11 +22,12 @@ if (isset($_POST)) {
 	if(Order::add_order($_POST['client_id'], $total, 1, $products)) {
 		setcookie('cart', null, time()-3600, "/");
 		unset($_COOKIE['cart']);
-		header("location: ../index.php?page=shop&message=Your order was sent with success!");
+		header("location: ../index.php?page=shop&alert=Your order was sent with success!");
 	}
 	else {
 		//There was an error, please try later.
 	}
 }
+
 
 ?>

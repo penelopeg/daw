@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 14:40:44
+/* Smarty version 3.1.30, created on 2016-11-26 14:17:57
   from "/var/www/html/ecommerce_daw/views/smarty/templates/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58383f5c2484c9_11847602',
+  'unifunc' => 'content_58398b85535799_41166425',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e35d8e8928fed690d8ee4ec8df5a0f1b396b7561' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/footer.tpl',
-      1 => 1480081203,
+      1 => 1480166227,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58383f5c2484c9_11847602 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58398b85535799_41166425 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="margintop container-fluid footer">
 	<div class="row footer marginfooter">
@@ -80,5 +80,11 @@ function content_58383f5c2484c9_11847602 (Smarty_Internal_Template $_smarty_tpl)
 			</span></a>
 		</p>
 	</div>
-</div><?php }
+</div>
+<?php echo '<script'; ?>
+ src="js/handler.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/typeahead.min.js"><?php echo '</script'; ?>
+><?php }
 }

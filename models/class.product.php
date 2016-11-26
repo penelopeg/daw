@@ -67,6 +67,10 @@ class Product {
 		}
 	}
 
+	public function get_products_search($key) {
+		return select_query_assoc("SELECT id, name, description, price, image_url FROM product WHERE name like '%".$key."%'");
+	}
+
 	public function get_newest($category_id = 0) {
 		return select_query_assoc('SELECT id, name, description, price, image_url FROM product ORDER BY id DESC LIMIT 4');
 	}

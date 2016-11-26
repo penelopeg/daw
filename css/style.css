@@ -1,13 +1,12 @@
 /*global */
 body {
-	background: #f1f1f1;
+	background: #eee url('../imgs/background.png');
 }
 
 .wrapper{
   min-height: 100%;
   position: relative;
 }
-
 
 .marginlogo {
 	margin-top:	55px;
@@ -47,17 +46,67 @@ body {
 	margin-left: 10px;
 }
 
-.colornav {
-	background: #cfcfcf;
-}
-
-.colorlinks a {
-	color: black !important;
+.logomargin {
+	margin-top: -5px;
 }
 
 .colorlinks a:hover {
 	color:#e84d1c !important;
 }
+
+/*Alert message box*/
+.alert{
+  top: 80px;
+  left: 40%;
+  position: absolute;
+  width: 300px;
+  color: black;
+  z-index: 1000;
+  text-align: center;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
 
 /*
 footer
@@ -85,14 +134,23 @@ footer
 .tableCollapse {
 	border-collapse:collapse;
 }
+.tableCursor {
+	cursor:pointer;
+}
 
 /*shop items */
+.item-wrapper {
+	position: absolute;
+	bottom: 5;
+}
 
 .product-item {
 	padding: 15px;
 	background: #fff;
 	margin-top: 20px;
 	position: relative;
+	width: 255px;
+	height: 350px;
 }
 .product-item:hover {
 	box-shadow: 5px 5px rgba(234, 234, 234, 0.9);
@@ -120,6 +178,7 @@ footer
 }
 .pi-img-wrapper {
 	position: relative;
+	height: 70%;
 }
 .pi-img-wrapper div {
 	background: rgba(0,0,0,0.3);
@@ -180,4 +239,64 @@ footer
 	color: #fff;
 	background: #e84d1c;
 	border-color: #e84d1c;
+}
+
+
+/*Search */
+.form-background {
+	background-color:white !important;
+}
+
+.twitter-typeahead{
+width:100%;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+  margin-bottom: 0;
+}
+.tt-dropdown-menu {
+  min-width: 160px;
+  margin-top: 2px;
+  padding: 5px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+  width:100%;        
+}
+
+.tt-suggestion {
+  display: block;
+  padding: 3px 20px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  color: #fff;
+  background-color: #0081c2;
+  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0)
+}
+
+.tt-suggestion.tt-is-under-cursor a {
+  color: #fff;
+}
+
+.tt-suggestion p {
+  margin: 0;
 }

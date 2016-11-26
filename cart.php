@@ -21,6 +21,9 @@ else {
 	$smarty->assign('login',0);
 }
 
+$alert = isset($_GET['alert']) ? $_GET['alert'] : 'none';
+$smarty->assign('alert', $alert);
+
 $products = array();
 $total = 0;
 if(isset($_COOKIE['cart'])) {

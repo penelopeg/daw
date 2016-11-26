@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 14:30:22
+/* Smarty version 3.1.30, created on 2016-11-26 15:32:16
   from "/var/www/html/ecommerce_daw/views/smarty/templates/register.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58383cee17ce73_32927128',
+  'unifunc' => 'content_58399cf04ecf36_20222673',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2bcb799d42fb571c7115cf7909b25605021e4627' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/register.tpl',
-      1 => 1480080616,
+      1 => 1480170648,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_58383cee17ce73_32927128 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58399cf04ecf36_20222673 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,11 +55,6 @@ function content_58383cee17ce73_32927128 (Smarty_Internal_Template $_smarty_tpl)
 	<section class="container margintop">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<?php if (isset($_smarty_tpl->tpl_vars['class']->value) && isset($_smarty_tpl->tpl_vars['message']->value)) {?>
-        			<div id="output" class="<?php echo $_smarty_tpl->tpl_vars['class']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['message']->value;?>
-</div>
-        		<?php }?>
 				<h2 id="title">Sign Up</h2>
 				<form method="post" action="controllers/register_action.php">
 					<div class="form-group">

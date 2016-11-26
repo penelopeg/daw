@@ -42,8 +42,19 @@ class Client {
 			'UPDATE client SET address = ?, city_id = ?, country_id = ?, payment_info = ? WHERE id = ?',
 			array($address, $city_id, $country_id, $payment_info, $id)
 		);
-
 	}
+
+
+	public function update_client_field($fields = array(), $client_id) {
+		$query = 'UPDATE client SET ' .implode("= ?, ", array_keys($fields)) . '=? WHERE id = ?';
+		$values = array();
+		foreach ($fields as $field) {
+			array_push($values, $field);
+		}
+		array_push($values, $client_id);
+		execute_query($query, $values);
+	}
+
 	public function delete_client($id) {
 		execute_query(
 			'DELETE FROM client WHERE id = ?',
@@ -57,7 +68,7 @@ class Client {
 
 	public function check_client($email, $password) {
 		$res = select_query_assoc(
-			'SELECT id, email FROM client WHERE email = ? AND password = ?', 
+			'SELECT id, email, firstname FROM client WHERE email = ? AND password = ?', 
 			array($email, $password)
 		);
 		if (!empty($res)) {

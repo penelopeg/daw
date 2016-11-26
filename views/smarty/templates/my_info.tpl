@@ -12,16 +12,12 @@
 		</div>
 		<div class="form-group">
 			<label for="email">Email:</label>
-			<input type="email" class="form-control" id="email" name="email" placeholder="Input your email" value="{$client.email}" required/>
-		</div>
-		<!--<div class="form-group">
-			<label for="pwd">Password:</label>
-			<input type="password" class="form-control" id="pwd" name="pwd" placeholder="******" required/> 
+			<input type="email" class="form-control" id="email" name="email" placeholder="Input your email" value="{$client.email}" disabled/>
 		</div>
 		<div class="form-group">
-			<label for="pwd-r">Repeat Password:</label>
-			<input type="password" class="form-control" id="pwd-r" name="pwd-r" placeholder="Repeat your password" required/>
-		</div>-->
+			<label for="pwd">New Password:</label>
+			<input type="password" class="form-control" id="pwd" name="pwd" placeholder="******"/> 
+		</div>
 		<hr class="colorgraph">
 		<div class="row">
 			<div class="col-xs-12 col-md-6"><input type="submit" value="Save" class="btn btn-success btn-block btn-lg" tabindex="7"></div>

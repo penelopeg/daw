@@ -47,9 +47,11 @@
 								</div>
 							</div>
 							<h3><a href="index.php?page=details&id={$product.id}">{$product.name}</a></h3>
-						<div class="pi-price">{$product.price}€</div>
-						<div class="product-id hidden">{$product.id}</div>
-						<a class="addcart btn add2cart">Add to cart</a>
+						<div class="sticker sticker-new"></div>
+						<div class="item-wrapper">
+							<div class="pi-price">{$product.price}€</div>
+							<div class="product-id hidden">{$product.id}</div>
+							<a class="addcart btn add2cart">Add to cart</a>
 							<select class="quant add2cart">
 								<option value='1'>1</option>
 								<option value='2'>2</option>
@@ -62,7 +64,7 @@
 								<option value='9'>9</option>
 								<option value='10'>10</option>
 							</select>
-							<div class="sticker sticker-new"></div>
+						</div>
 						</div>
 					</div>
 					{/foreach}
@@ -72,6 +74,5 @@
 	</div>
 	<!-- footer -->
 	{include file="footer.tpl"}
-	<script src="js/handler.js"></script>
 </body>
 </html>

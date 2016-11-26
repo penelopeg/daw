@@ -44,7 +44,7 @@
 								</div>
 							</td>
 							<td class="col-md-1" style="text-align: center">
-								<input type="number" class="form-control" id="quantity" value="{$product.quantity}">
+								<input type="number" class="form-control change-quantity" id="quantity" value="{$product.quantity}">
 							</td>
 							<td class="col-md-1 text-center"><strong>{$product.price}€</strong></td>
 							<td class="col-md-1 text-center"><strong>{$product.total}€</strong></td>
@@ -84,6 +84,5 @@
 	</div>
 	<!-- footer -->
 	{include file="footer.tpl"}
-	<script src="js/handler.js"></script>
 </body>
 </html>

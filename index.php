@@ -20,13 +20,16 @@ else {
 	$smarty->assign('login',0);
 }
 
+$alert = isset($_GET['alert']) ? $_GET['alert'] : 'none';
+$smarty->assign('alert', $alert);
+
 if (isset($_GET['page'])) {	
 	$page = $_GET['page'];
 	switch ($page) {
 		case 'login':
-			if(isset($_GET['message'])){
-				$smarty->assign('message', $_GET['message']);
-				$smarty->assign('class', $_GET['class']);
+			$redirect = "";
+			if(isset($_GET['redirect'])) {
+				$redirect = "?redirect=" . $_GET['redirect'];
 			}
 			include('controllers/login.php');
 			break;
@@ -34,7 +37,7 @@ if (isset($_GET['page'])) {
 			include('controllers/logout.php');
 			break;
 		case 'register':
-			if(isset($_GET['message']))
+			if(isset($_GET['alert']))
 			{
 				$firstname = $_GET['firstname'];
 				$lastname = $_GET['lastname'];
@@ -58,9 +61,6 @@ if (isset($_GET['page'])) {
 			}
 			break;
 		case 'shop':
-			if(isset($_GET['message'])) {
-				$message = $_GET['message'];
-			}
 			if(isset($_GET['category_id'])) {
 				$category_id = $_GET['category_id'];
 			}
@@ -86,6 +86,10 @@ if (isset($_GET['page'])) {
 			include('controllers/client_zone.php');
 			break;
 	}
+}
+elseif (isset($_GET['search'])) {
+	$search_key = $_GET['search'];
+	include('controllers/shop.php');
 }
 else {
 	//index code

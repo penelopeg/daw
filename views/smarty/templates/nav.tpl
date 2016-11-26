@@ -1,14 +1,15 @@
-<nav class="navbar navbar-default navbar-fixed-top colornav" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-		</button> <a class="navbar-brand" href="index.php"><img src="imgs/logo_thumb.png"/></a>
+		</button>
+		<a class="navbar-brand" href="index.php"><img class="logomargin" src="imgs/logo_thumb.png"/></a>
 	</div>
 	
 	<div class="colorlinks collapse navbar-collapse marginnav"  id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
-			<li class="">
-				<a href="#">Sales!</a>
+			<li>
+				<a href="index.php?page=shop">Store</a>
 			</li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Category<strong class="caret"></strong></a>
@@ -21,13 +22,11 @@
 				</ul>
 			</li>
 			<li>
-				<form class="navbar-form" role="search">
+				<form class="navbar-form">
 					<div class="form-group">
-						<input type="text" class="form-control">
+						<input type="text" class="form-control typeahead form-background" name="search">
 					</div> 
-					<button type="submit" class="btn btn-default">
-						Search
-					</button>
+					<button type="submit" class="btn btn-default">Search</button>
 				</form>
 			</li>
 		</ul>
@@ -35,27 +34,33 @@
 		<ul class="nav navbar-nav navbar-right">
 			<li>
 				<a href="{$field1.href}">
-					<span class="glyphicon glyphicon-log-in"/>{$field1.name}
+					<span class="glyphicon glyphicon-log-in"></span> {$field1.name} 
 				</a>
 			</li>
 			{if !empty($usermenu)}
 			<li>
 				<a href="{$usermenu.href}">
-					<span class="glyphicon glyphicon-cog"/>{$usermenu.name}
+					<span class="glyphicon glyphicon-cog"></span> {$usermenu.name}
 				</a>
 			</li>
 			{else}
 			<li>
 				<a href="index.php?page=register">
-					<span class="glyphicon glyphicon-user"/>Register
+					<span class="glyphicon glyphicon-user"></span> Register
 				</a>
 			</li>
 			{/if}
 			<li>
 				<a href="index.php?page=cart">
-					<span class="glyphicon glyphicon-shopping-cart"/>
+					<span class="glyphicon glyphicon-shopping-cart"></span> Your cart
 				</a>
 			</li>
 		</ul>
 	</div>
 </nav>
+
+{if $alert!='none'}
+	<div class="alert alert-danger animated fadeInUp alert">{$alert}</div>
+{else}
+	<div class="alert alert-danger animated fadeInUp alert hidden"></div>
+{/if}

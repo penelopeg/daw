@@ -57,3 +57,5 @@
 		</p>
 	</div>
 </div>
+<script src="js/handler.js"></script>
+<script src="js/typeahead.min.js"></script>

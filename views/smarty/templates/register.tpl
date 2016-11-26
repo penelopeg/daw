@@ -21,9 +21,6 @@
 	<section class="container margintop">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				{if isset($class) && isset($message)}
-        			<div id="output" class="{$class}">{$message}</div>
-        		{/if}
 				<h2 id="title">Sign Up</h2>
 				<form method="post" action="controllers/register_action.php">
 					<div class="form-group">

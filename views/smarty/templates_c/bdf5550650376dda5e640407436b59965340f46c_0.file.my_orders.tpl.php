@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 17:17:14
+/* Smarty version 3.1.30, created on 2016-11-25 17:29:49
   from "/var/www/html/ecommerce_daw/views/smarty/templates/my_orders.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5838640aa1eb53_00288996',
+  'unifunc' => 'content_583866fd0f2739_63480077',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bdf5550650376dda5e640407436b59965340f46c' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/my_orders.tpl',
-      1 => 1480090632,
+      1 => 1480091360,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5838640aa1eb53_00288996 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583866fd0f2739_63480077 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table class="table table-striped table-condensed tableCollapse">
 	<thead>
@@ -38,7 +38,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['data']->value) {
 ?>
 		<tr data-toggle="collapse" data-target=".<?php echo $_smarty_tpl->tpl_vars['data']->value['order']['id'];?>
-" class="accordion-toggle">
+" class="accordion-toggle tableCursor">
 			<td><?php echo $_smarty_tpl->tpl_vars['data']->value['order']['id'];?>
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['data']->value['order']['order_date'];?>

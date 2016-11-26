@@ -9,7 +9,7 @@
 	</thead>   
 	<tbody>
 		{foreach $orders as $data}
-		<tr data-toggle="collapse" data-target=".{$data.order.id}" class="accordion-toggle">
+		<tr data-toggle="collapse" data-target=".{$data.order.id}" class="accordion-toggle tableCursor">
 			<td>{$data.order.id}</td>
 			<td>{$data.order.order_date}</td>
 			<td>{$data.order.total}</td>

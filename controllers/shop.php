@@ -6,14 +6,17 @@ if (isset($category_id)) {
 		$smarty->assign('noresults', 'There are no items with this category at the moment!');
 	}
 }
+elseif (isset($search_key)) {
+	$products =  Product::get_products_search($search_key);
+	if (empty($products)) {
+		$smarty->assign('noresults', 'There are no items with this category at the moment!');
+	}	
+}
 else {
 	$products = Product::get_products();
 }
-if(isset($message)) {
-	$smarty->assign('message', $message);
-}
 
-	$smarty->assign('products', $products);
-	$smarty->display('shop.tpl');
+$smarty->assign('products', $products);
+$smarty->display('shop.tpl');
 
 ?>

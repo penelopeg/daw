@@ -55,6 +55,5 @@
 	</section>
 	<!-- footer -->
 	{include file="footer.tpl"}
-	<script src="js/handler.js"></script>
 </body>
 </html>

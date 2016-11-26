@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 00:34:44
+/* Smarty version 3.1.30, created on 2016-11-26 15:26:03
   from "/var/www/html/ecommerce_daw/views/smarty/templates/login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58362794ef4ed1_30422829',
+  'unifunc' => 'content_58399b7b5c43f6_25623613',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dacc6f3003b8bad08029910e3fc94df32f08cb64' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/login.tpl',
-      1 => 1479944083,
+      1 => 1480170264,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_58362794ef4ed1_30422829 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58399b7b5c43f6_25623613 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,13 +56,9 @@ function content_58362794ef4ed1_30422829 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="col-sm-4 col-sm-push-4">
 				<div class="panel panel-default">
 					<div class="panel-body">
-					<?php if (isset($_smarty_tpl->tpl_vars['class']->value)) {?>
-	        			<div id="output" class="<?php echo $_smarty_tpl->tpl_vars['class']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['message']->value;?>
-</div>
-	        		<?php }?>
 						<h2>Login</h2>
-						<form method="post" action="controllers/login_action.php">
+						<form method="post" action="controllers/login_action.php<?php echo $_smarty_tpl->tpl_vars['redirect']->value;?>
+">
 							<div class="form-group">
 								 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
 							</div>
