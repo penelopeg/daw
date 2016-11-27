@@ -58,16 +58,16 @@
 											</div>
 										</div>							
 									</div>
-									<!--<div class="row">
+									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-12">
 											<label>Product Categories</label>
 											<div class="form-group checkbox-container">
 												{foreach $cats as $cat}
-												<input type="checkbox" name="category[{$cat.id}]"/>{$cat.category}<br/>
+												<input type="checkbox" id="c{$cat.id}" name="category[{$cat.id}]"/>{$cat.category}<br/>
 												{/foreach}
 											</div>
 										</div>
-									</div>-->
+									</div>
 									<input type="submit" value="Edit" class="btn btn-info btn-block">
 								</form>
 							</div>

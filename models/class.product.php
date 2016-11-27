@@ -41,8 +41,8 @@ class Product {
 	}
 
 	// Remove product categories from product
-	public function remove_category_2_product($product_id, $category_id) {
-		execute_query('DELETE FROM product_2_categories WHERE product_id = ? AND category_id = ?', array($product_id, $category_id));
+	public function remove_category_2_product($product_id) {
+		execute_query('DELETE FROM product_2_categories WHERE product_id = ?', array($product_id));
 	}
 
 	// Get product by id
@@ -81,7 +81,9 @@ class Product {
 		return last_insert_id();
 	}
 
-	//remove categories
+	// get categories from product 
+	public function get_prod_categories($product_id) { 
+		return select_query_assoc('SELECT category_id FROM product_2_categories WHERE product_id = ?', array($product_id)); }
 
 }
 

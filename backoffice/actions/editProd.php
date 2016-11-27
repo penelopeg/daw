@@ -13,6 +13,7 @@ if (isset($_SESSION['admin']) || isset($_SESSION['editor'])) {
 	$desc = $_POST['description'];
 	$id = $_POST['id'];
 	$available = (isset($_POST['available'])) ? 1 : 0;
+	$categories = isset($_POST['category']) ? array_keys($_POST['category']) : array();
 	
 	//Check if upload file is right type and not corrupted
 	if($_FILES["img"]["error"] == 0) {
@@ -35,12 +36,21 @@ if (isset($_SESSION['admin']) || isset($_SESSION['editor'])) {
 
 			//Update product
 			Product::update_product($id,$name,$desc,$price,$url,$available);
+			// Update product categories to product
+			Product::remove_category_2_product($id);
+			foreach ($categories as $category) {
+				Product::add_category_2_product($product_id, $category);
+			}
 			$message = 'Product updated!';   
 		} else {
 			$message = 'File type not supported!';
 		} 			
 	} else {
 		//If no img is uploaded
+		Product::remove_category_2_product($id);
+		foreach ($categories as $category) {
+			Product::add_category_2_product($id, $category);
+		}		
 		Product::update_product_no_img($id,$name,$desc,$price,$available);
 		$message = 'Product updated!';
 	}

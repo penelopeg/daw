@@ -1,5 +1,12 @@
 $(document).ready(function($) {
 
+	function unCheck()
+	{
+		$('input:checkbox').each(function(index, el) {
+			$(this).attr('checked', false);		
+		});
+	}
+
 	$('.clickable-row').hover(function() {
 		$(this).addClass('clickable-row-border');
 	}, function() {
@@ -20,14 +27,27 @@ $(document).ready(function($) {
 
 	/* When clicking product row, get information from row to form */
 	$('.prod').click(function(event) {
+		unCheck();
 		$('#name').val($(this).children('td').first().text());
 		$('#price').val(parseFloat($(this).children('td').first().next().text()));
 		$('#description').val($(this).children('td').first().next().next().text());
-		$('#id').val($(this).children('td').first().next().next().next().next().text());
+		var id = $(this).children('td').first().next().next().next().next().text();
+		$('#id').val(id);
 		$('#available').attr('checked', false);
 		var available = $(this).children('td').first().next().next().next().next().next().text();
 		if(available=='Yes')
 			$('#available').attr('checked', 'checked');
+		$.ajax({
+			url: '../backoffice/actions/getProdCat.php',
+			data: 'id='+id,
+			dataType: 'json',
+			cache: false,
+			success: function(data) {
+				$.each(data, function(key, val) {
+					$('#c'+val).attr('checked', 'checked');
+				});
+			}
+		});		
 	});
 
 	/*Message box delay*/
