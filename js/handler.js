@@ -11,7 +11,6 @@ $('.addcart').click(function(event){
 	});
 });
 
-
 /* Change quantity on cart */
 $('.change-quantity').change(function(event){
 	var id = $(this).parent().parent().find('td').find('.product-id').html();
@@ -25,7 +24,6 @@ $('.change-quantity').change(function(event){
 	});
 });
 
-
 /* Remove items from cart */
 $('.removecart').click(function(event){
 	var id = $(this).parent().find('.product-id').html();
@@ -38,7 +36,6 @@ $('.removecart').click(function(event){
 	});
 });
 
-
 /* Search function */
 $(document).ready(function(){
 	$('.typeahead').typeahead({
@@ -47,7 +44,6 @@ $(document).ready(function(){
 		limit : 30
 	});
 });
-
 
 /* Alert message box display*/
 $('.alert').delay(1500).slideToggle('500');

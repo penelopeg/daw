@@ -19,6 +19,7 @@
 			$hashpwd = md5($pwd);
 			$client = Client::insert_client($firstname, $lastname, $email, $hashpwd);
 			if ($client != "duplicated") {
+				mail($email,"Welcome to Geekin Out","Hi {$firstname}, thanks for registering at Geekin Out!");
 				$message = "Sign up was successful! Please login!";
 				header("location: ../index.php?page=login&alert=".$message);
 			}

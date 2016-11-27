@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-26 15:26:03
+/* Smarty version 3.1.30, created on 2016-11-27 00:32:48
   from "/var/www/html/ecommerce_daw/views/smarty/templates/login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58399b7b5c43f6_25623613',
+  'unifunc' => 'content_583a1ba0a1b208_45679146',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dacc6f3003b8bad08029910e3fc94df32f08cb64' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/login.tpl',
-      1 => 1480170264,
+      1 => 1480199923,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_58399b7b5c43f6_25623613 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a1ba0a1b208_45679146 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +42,6 @@ function content_58399b7b5c43f6_25623613 (Smarty_Internal_Template $_smarty_tpl)
 >
 </head>
 <body>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

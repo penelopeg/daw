@@ -97,6 +97,7 @@ elseif (isset($_GET['search'])) {
 }
 else {
 	//index code
+	//Get last added products to show on index
 	$products = Product::get_newest();
 	$smarty->assign('products', $products);
 	$smarty->display('index.tpl');
