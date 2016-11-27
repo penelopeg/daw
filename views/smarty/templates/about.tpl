@@ -22,7 +22,7 @@
 						we have an incredible collection of geeky gifts for all ages, fandoms and beings!</p>
 				</div>
 				<div class="col-md-7">
-						<img src="imgs/site/alert.jpg"></img>
+						<img src="imgs/site/alert.png"></img>
 				</div>
 			</div>
 		</div>

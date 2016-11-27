@@ -36,14 +36,15 @@
 				<p>
 					<a href="index.php?page=cart">Your cart</a>
 				</p>
-				<p>
-					<a href="index.php?page=contacts">Contacts</a>
-				</p>
 			</dl>
 		</div>
 		<div class="col-md-4">
+			<dt class="titlebackground">
+				Contact us
+			</dt>
+
 			<address>
-				 <strong class="titlebackground">Geekin' Out, Inc.</strong><br /> Hogwarts, Inside the Narnia Closet<br /> Neverland, CA 94107<br /> <abbr title="Phone">P:</abbr> (999) 999-99999
+				 <strong class="titlebackground">Geekin' Out, Inc.</strong><br /> Hogwarts, Inside the Narnia Closet<br /> Neverland, CA 94107<br /> <abbr title="Phone">P:</abbr> (999) 999-99999 <br /> Email: <a href="mailto:info@geekinout.land">info@geekinout.land</a>
 			</address>
 		</div>
 	</div>
