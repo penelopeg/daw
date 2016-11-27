@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 17:19:10
+/* Smarty version 3.1.30, created on 2016-11-27 02:14:19
   from "/var/www/html/ecommerce_daw/views/smarty/templates/order_form.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5838647e999e01_22673160',
+  'unifunc' => 'content_583a336b1012d0_02246660',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6c5c1ca24c5115471a5b0afbdb0c1ac7b813154' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/order_form.tpl',
-      1 => 1480081235,
+      1 => 1480209205,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5838647e999e01_22673160 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a336b1012d0_02246660 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,6 +59,8 @@ function content_5838647e999e01_22673160 (Smarty_Internal_Template $_smarty_tpl)
 						<div class="col-md-6">
 							<h3 id="title">Your Information</h3>
 							<input type="number" class="hidden" name="client_id" value="<?php echo $_smarty_tpl->tpl_vars['client_id']->value;?>
+"/>
+							<input type="text" class="hidden" name="email" value="<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 "/>
 							<div class="form-group">
 								<label for="firstname">First Name:</label>

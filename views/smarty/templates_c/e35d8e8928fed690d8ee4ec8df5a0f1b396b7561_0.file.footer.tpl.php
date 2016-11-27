@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-26 14:17:57
+/* Smarty version 3.1.30, created on 2016-11-27 02:13:41
   from "/var/www/html/ecommerce_daw/views/smarty/templates/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58398b85535799_41166425',
+  'unifunc' => 'content_583a3345d4dc76_60477367',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e35d8e8928fed690d8ee4ec8df5a0f1b396b7561' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/footer.tpl',
-      1 => 1480166227,
+      1 => 1480206742,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58398b85535799_41166425 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a3345d4dc76_60477367 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="margintop container-fluid footer">
 	<div class="row footer marginfooter">
@@ -66,7 +66,6 @@ function content_58398b85535799_41166425 (Smarty_Internal_Template $_smarty_tpl)
 			</dl>
 		</div>
 		<div class="col-md-4">
-			 
 			<address>
 				 <strong class="titlebackground">Geekin' Out, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890
 			</address>

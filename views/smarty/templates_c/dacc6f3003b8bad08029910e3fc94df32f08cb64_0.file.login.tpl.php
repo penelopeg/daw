@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-27 00:32:48
+/* Smarty version 3.1.30, created on 2016-11-27 02:13:46
   from "/var/www/html/ecommerce_daw/views/smarty/templates/login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583a1ba0a1b208_45679146',
+  'unifunc' => 'content_583a334a871512_80243152',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dacc6f3003b8bad08029910e3fc94df32f08cb64' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/login.tpl',
-      1 => 1480199923,
+      1 => 1480208251,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_583a1ba0a1b208_45679146 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a334a871512_80243152 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,7 +67,7 @@ function content_583a1ba0a1b208_45679146 (Smarty_Internal_Template $_smarty_tpl)
 							<button type="submit" class="btn btn-primary">Enter</button>
 							<a href="<?php echo $_smarty_tpl->tpl_vars['field2']->value['href'];?>
 ">I don't have an account</a>
-							<p><a href="#">I forgot my password!</a></p>
+							<!--<p><a href="#">I forgot my password!</a></p>-->
 						</form>
 					</div>
 				</div>
