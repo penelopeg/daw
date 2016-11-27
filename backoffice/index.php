@@ -40,6 +40,7 @@ if(isset($_SESSION['admin']) || isset($_SESSION['editor'])) {
 			$cats = Product::get_categories();
 			$smarty->assign('cats', $cats);
 			break;
+
 		case 'editProd':
 			$prods = Product::get_products();
 			$smarty->assign('prods', $prods);
@@ -51,10 +52,12 @@ if(isset($_SESSION['admin']) || isset($_SESSION['editor'])) {
 			$clients = Client::get_clients();
 			$smarty->assign('clients', $clients);
 			break;
+
 		case 'editUser':
 			$users = User::get_users();
 			$smarty->assign('users', $users);
 			break;			
+
 		case 'remUser':
 			$users = User::get_users();
 			$smarty->assign('users', $users);
@@ -66,8 +69,8 @@ if(isset($_SESSION['admin']) || isset($_SESSION['editor'])) {
 			$smarty->assign('status', $status);
 			$smarty->assign('orders', $orders);
 			break;	
+
 		default:
-			# code...
 			break;
 	}
 

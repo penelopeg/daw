@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-27 02:13:46
+/* Smarty version 3.1.30, created on 2016-11-27 13:11:49
   from "/var/www/html/ecommerce_daw/views/smarty/templates/login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583a334a871512_80243152',
+  'unifunc' => 'content_583acd85785a73_91315814',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dacc6f3003b8bad08029910e3fc94df32f08cb64' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/login.tpl',
-      1 => 1480208251,
+      1 => 1480248687,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_583a334a871512_80243152 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583acd85785a73_91315814 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +42,7 @@ function content_583a334a871512_80243152 (Smarty_Internal_Template $_smarty_tpl)
 >
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 				<!-- Navigation menu -->

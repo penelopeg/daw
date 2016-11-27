@@ -15,7 +15,7 @@
 	        {/if}
 	        <div class="avatar"></div>
 	        <div class="form-box">
-	            <form action="login_action.php" method="post">
+	            <form action="logIn.php" method="post">
 	                <input type="email" name="email" placeholder="Email" required>
 	                <input type="password" name="password" placeholder="Password" required>
 	                <button class="btn btn-info btn-block login" type="submit">Login</button>

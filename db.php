@@ -1,5 +1,6 @@
 <?php
 
+// Information to connect to database
 $host = 'localhost';
 $db   = 'ecommerce_daw';
 $user = 'root';
@@ -20,6 +21,8 @@ $opt = [
 	PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 	PDO::ATTR_EMULATE_PREPARES   => false,
 ];
+
+// We use PDO connection
 $pdo = new PDO($dsn, $user, $pass, $opt);
 
 ?>

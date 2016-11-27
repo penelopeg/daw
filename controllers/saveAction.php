@@ -1,9 +1,11 @@
 <?php
+
 include('../db.php');
 include('../functions.php');
 require('../models/class.client.php');
 
 if (isset($_POST)) {
+	//Get saved information from client, if information is different from $_POST, save that information
 	$client = Client::get_client($_POST['client_id']);
 	$fields = array();
 	if ($_POST['firstname'] != $client['firstname']) {
@@ -15,6 +17,7 @@ if (isset($_POST)) {
 	if ($_POST['address'] != $client['address']) {
 		$fields['address'] = $_POST['address'];
 	}
+	//New password field is not required to be filled, so we check if it isn't before verifying if we change it
 	if (!empty($_POST['pwd']) && md5($_POST['pwd']) != $client['password']) {
 		$fields['password'] = md5($_POST['pwd']);
 	}
@@ -29,7 +32,7 @@ if (isset($_POST)) {
 	}	
 
 	Client::update_client_field($fields, $_POST['client_id']);
-	header('location: ../index.php?page=client_zone');
+	header('location: ../index.php?page=clientZone');
 }
 
 ?>

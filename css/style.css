@@ -4,8 +4,8 @@ body {
 }
 
 .wrapper{
-  min-height: 100%;
-  position: relative;
+	min-height: 100%;
+	position: relative;
 }
 
 .marginlogo {
@@ -56,13 +56,13 @@ body {
 
 /*Alert message box*/
 .alert{
-  top: 80px;
-  left: 40%;
-  position: absolute;
-  width: 300px;
-  color: black;
-  z-index: 1000;
-  text-align: center;
+	top: 80px;
+	left: 40%;
+	position: absolute;
+	width: 300px;
+	color: black;
+	z-index: 1000;
+	text-align: center;
 }
 .animated {
   -webkit-animation-duration: 1s;
@@ -73,37 +73,37 @@ body {
 
 @-webkit-keyframes fadeInUp {
   0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
+	opacity: 0;
+	-webkit-transform: translateY(20px);
+	transform: translateY(20px);
   }
 
   100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
   }
 }
 
 @keyframes fadeInUp {
   0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
+	opacity: 0;
+	-webkit-transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	transform: translateY(20px);
   }
 
   100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
   }
 }
 
 .fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
 }
 
 
@@ -128,7 +128,7 @@ footer
 	color: black !important
 }
 .hiddenRow {
-    padding: 0 !important;
+	padding: 0 !important;
 }
 
 .tableCollapse {
@@ -265,14 +265,14 @@ width:100%;
   *border-right-width: 2px;
   *border-bottom-width: 2px;
   -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+	 -moz-border-radius: 6px;
+		  border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	 -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+		  box-shadow: 0 5px 10px rgba(0,0,0,.2);
   -webkit-background-clip: padding-box;
-     -moz-background-clip: padding;
-          background-clip: padding-box;
+	 -moz-background-clip: padding;
+		  background-clip: padding-box;
   width:100%;        
 }
 

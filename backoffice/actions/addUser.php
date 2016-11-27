@@ -1,18 +1,20 @@
 <?php
 
+//Only admins can add users
 session_start();
-if(isset($_SESSION['admin']))
-{
+if(isset($_SESSION['admin'])) {
 	include('../../db.php');
 	include('../../functions.php');		
 	require('../../models/class.user.php');
-	$fn = $_POST['firstname'];
-	$ln = $_POST['lastname'];
-	$em = $_POST['email'];
-	$pw = md5($_POST['password']);
+
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
+	$email = $_POST['email'];
+	$pwd = md5($_POST['password']);
 	$role = $_POST['role'];
 
-	if(User::insert_user($role, $fn, $ln, $em, $pw)=='duplicated')
+	// Insert user
+	if(User::insert_user($role, $firstname, $lastname, $email, $pwd)=='duplicated')
 		$message = 'User already exists!';
 	else
 		$message = 'User inserted!';

@@ -1,15 +1,20 @@
 <?php
+
+//Check if admin or editor are logged in
 session_start();
 if (isset($_SESSION['admin']) || isset($_SESSION['editor'])) {
 	include('../../db.php');
 	include('../../functions.php');
 	require('../../models/class.product.php');
 	
+	//Get product information	
 	$name = $_POST['name'];
 	$price = $_POST['price'];
 	$desc = $_POST['description'];
 	$id = $_POST['id'];
 	$available = (isset($_POST['available'])) ? 1 : 0;
+	
+	//Check if upload file is right type and not corrupted
 	if($_FILES["img"]["error"] == 0) {
 		$allowedExts = array('jpeg', 'jpg', 'png');
 		$temp = explode('.', $_FILES['img']['name']);
@@ -22,20 +27,25 @@ if (isset($_SESSION['admin']) || isset($_SESSION['editor'])) {
 			&& ($_FILES['img']['size'] < 5000000)
 			&& in_array($extension, $allowedExts)
 		){
+			//Save image
 			$url = (microtime(true).$_FILES['img']['name']);	         
 			move_uploaded_file($_FILES['img']['tmp_name'], '../../imgs/'.$url);
 			$temp = Product::get_product($id);
 			unlink('../../imgs/'.$temp['image_url']);
+
+			//Update product
 			Product::update_product($id,$name,$desc,$price,$url,$available);
 			$message = 'Product updated!';   
 		} else {
 			$message = 'File type not supported!';
 		} 			
 	} else {
+		//If no img is uploaded
 		Product::update_product_no_img($id,$name,$desc,$price,$available);
 		$message = 'Product updated!';
 	}
 	header("location: ../index.php?page=editProd&message=$message");
 } else
 	header('location: ../index.php');
+
 ?>

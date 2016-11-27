@@ -45,16 +45,6 @@ class Product {
 		execute_query('DELETE FROM product_2_categories WHERE product_id = ? AND category_id = ?', array($product_id, $category_id));
 	}
 
-	// delete product and associations
-	public function delete($id) {
-		execute_query('DELETE FROM product_2_categories WHERE product_id = ?', array($id));
-
-		execute_query(
-			'DELETE FROM product WHERE id = ?',
-			array($id)
-		);
-	}
-
 	// Get product by id
 	public function get_product($id) {
 		return select_query_assoc('SELECT id, name, description, price, image_url, available FROM product WHERE id = ?', array($id))[0];

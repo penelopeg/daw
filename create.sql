@@ -122,6 +122,10 @@ insert into product (name, description, price, image_url, available) values ('St
 
 INSERT INTO product_2_categories (product_id, category_id) VALUES (1, 7);
 INSERT INTO product_2_categories (product_id, category_id) VALUES (1, 4);
+INSERT INTO product_2_categories (product_id, category_id) VALUES (2, 6);
+INSERT INTO product_2_categories (product_id, category_id) VALUES (3, 7);
+INSERT INTO product_2_categories (product_id, category_id) VALUES (4, 2);
+INSERT INTO product_2_categories (product_id, category_id) VALUES (5, 8);
 
 INSERT INTO orders (client_id, order_date, status_id) VALUES (1, NOW(), 2);
 INSERT INTO product_2_orders (order_id, product_id, quantity, price_total) VALUES (1, 1, 2, 40);

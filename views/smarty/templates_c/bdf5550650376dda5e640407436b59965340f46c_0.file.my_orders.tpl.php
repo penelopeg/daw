@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 17:29:49
+/* Smarty version 3.1.30, created on 2016-11-27 12:15:50
   from "/var/www/html/ecommerce_daw/views/smarty/templates/my_orders.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583866fd0f2739_63480077',
+  'unifunc' => 'content_583ac066d6e9f9_35412906',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bdf5550650376dda5e640407436b59965340f46c' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/my_orders.tpl',
-      1 => 1480091360,
+      1 => 1480198757,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583866fd0f2739_63480077 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583ac066d6e9f9_35412906 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table class="table table-striped table-condensed tableCollapse">
 	<thead>
@@ -52,7 +52,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['data']->value) {
 				<td><span class="label label-warning"><?php echo $_smarty_tpl->tpl_vars['data']->value['order']['status'];?>
 </span></td>
 			<?php } elseif ($_smarty_tpl->tpl_vars['data']->value['order']['status_id'] == 3) {?>
-				<td><span class="label label-important"><?php echo $_smarty_tpl->tpl_vars['data']->value['order']['status'];?>
+				<td><span class="label label-primary"><?php echo $_smarty_tpl->tpl_vars['data']->value['order']['status'];?>
 </span></td>
 			<?php } else { ?>
 				<td><span class="label label-success"><?php echo $_smarty_tpl->tpl_vars['data']->value['order']['status'];?>

@@ -5,6 +5,7 @@ class Order {
 	public function __construct() {
 	}
 
+	//Get order by id, also get its products
 	public function get_order($id) {
 		$res = select_query_assoc(
 			'SELECT id, client_id, order_date, status_id, total FROM orders WHERE id = ?', 
@@ -23,6 +24,7 @@ class Order {
 		return $order;
 	}
 
+	// Get all orders, optionally by client id
 	public function get_orders($client_id = 0){
 		//get orders of client
 		if (!empty($client_id)) {
@@ -34,6 +36,7 @@ class Order {
 			$query1 = 'SELECT orders.id, client_id, order_date, status_id, order_status.status, total FROM orders, order_status WHERE order_status.id = status_id ORDER BY order_date, orders.id';
 			$query_values = array();
 		}
+
 		$res = select_query_assoc($query1, $query_values);
 		$orders = array();
 		foreach ($res as $row) {
@@ -56,6 +59,7 @@ class Order {
 		return $orders;
 	}
 
+	//Add new order on database
 	public function add_order($client_id, $total, $status_id, $products = array()) {
 		execute_query(
 			"INSERT INTO orders (client_id, order_date, status_id, total) VALUES (?, NOW(), ?, ?)",
@@ -77,6 +81,7 @@ class Order {
 
 	}
 
+	// Change order status
 	public function change_order_status($order_id, $status_id) {
 		execute_query(
 			"UPDATE orders SET status_id = ? WHERE id = ?", 
@@ -84,6 +89,7 @@ class Order {
 		);
 	}
 	
+	// Delete order
 	public function delete($id) {
 		execute_query('DELETE FROM product_2_orders WHERE order_id = ?', array($id));
 
@@ -93,15 +99,17 @@ class Order {
 		);
 	}
 
-
+	// Get list of cities
 	public function get_cities() {
 		return select_query_assoc('SELECT id, city_name FROM city');
 	}
 
+	// Get list of countries
 	public function get_countries() {
 		return select_query_assoc('SELECT id, country_name FROM country');
 	}
 
+	// Get possible status
 	public function get_status() {
 		return select_query_assoc('SELECT id, status FROM order_status');
 	}

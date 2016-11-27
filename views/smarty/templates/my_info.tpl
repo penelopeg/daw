@@ -1,5 +1,5 @@
 <h2 id="title">My Information</h2>
-<form method="post" action="controllers/save_action.php">
+<form method="post" action="controllers/saveAction.php">
 	<div class="col-md-6">
 		<input type="number" class="hidden" name="client_id" value="{$client.id}"/>
 		<div class="form-group">

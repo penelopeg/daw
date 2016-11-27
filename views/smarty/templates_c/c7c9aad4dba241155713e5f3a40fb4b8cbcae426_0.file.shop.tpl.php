@@ -1,47 +1,32 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-26 15:37:00
+/* Smarty version 3.1.30, created on 2016-11-27 13:15:36
   from "/var/www/html/ecommerce_daw/views/smarty/templates/shop.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58399e0c03f985_49579003',
+  'unifunc' => 'content_583ace68b3f6d3_49185278',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c7c9aad4dba241155713e5f3a40fb4b8cbcae426' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/shop.tpl',
-      1 => 1480170918,
+      1 => 1480248842,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:head.tpl' => 1,
     'file:nav.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_58399e0c03f985_49579003 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583ace68b3f6d3_49185278 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Geekin Out</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<?php echo '<script'; ?>
- src="js/jquery.min.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- src="js/bootstrap.min.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- src="js/scripts.js"><?php echo '</script'; ?>
->
-</head>
-<body>
+
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">

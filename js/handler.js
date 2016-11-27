@@ -3,7 +3,7 @@ $('.addcart').click(function(event){
 	var id = $(this).parent().find('.product-id').html();
 	var quant = $(this).parent().find('.quant').val();
 	$.ajax({
-		url: 'controllers/add_to_cart.php',
+		url: 'controllers/addToCart.php',
 		data: 'id='+id+'&quant='+quant,
 		success: function(data) {
 			$('.alert').html(data).removeClass('hidden').fadeIn('fast').delay('1000').fadeOut('slow');
@@ -16,7 +16,7 @@ $('.change-quantity').change(function(event){
 	var id = $(this).parent().parent().find('td').find('.product-id').html();
 	var quant = $(this).val();
 	$.ajax({
-		url: 'controllers/change_quantity.php',
+		url: 'controllers/changeQuant.php',
 		data: 'id='+id+'&quant='+quant,
 		success: function(data) {
 			location.reload();
@@ -28,7 +28,7 @@ $('.change-quantity').change(function(event){
 $('.removecart').click(function(event){
 	var id = $(this).parent().find('.product-id').html();
 	$.ajax({
-		url: 'controllers/remove_from_cart.php',
+		url: 'controllers/removeFromCart.php',
 		data: 'id='+id,
 		success: function(data) {
 			location.reload();
