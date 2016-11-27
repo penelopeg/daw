@@ -32,7 +32,7 @@ if (isset($_POST)) {
 	}	
 
 	Client::update_client_field($fields, $_POST['client_id']);
-	header('location: ../index.php?page=clientZone');
+	header('location: ../index.php?page=clientZone&alert=Information Saved!');
 }
 
 ?>

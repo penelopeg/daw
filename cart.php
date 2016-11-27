@@ -48,6 +48,9 @@ if(isset($_COOKIE['cart'])) {
 		$total += $product['price'] * $quantity; 
 	}
 }
+else {
+	$smarty->assign('message', 'No products added to Cart!');
+}
 
 $smarty->assign('products', $products);
 $smarty->assign('total', $total);

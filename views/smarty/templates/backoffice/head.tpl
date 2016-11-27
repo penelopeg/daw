@@ -18,7 +18,7 @@
 	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container"> 
 			<div class="navbar-header">
-				<a target="_blank" href="../index.php" class="navbar-brand"><img class="navbar-logo" src="../imgs/logo_backoffice.png"></a>
+				<a target="_blank" href="../index.php" class="navbar-brand"><img class="navbar-logo" src="../imgs/logos/logo_backoffice.png"></a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li {if $page=='index'} class="active" {/if}><a href="index.php?page=index">Home</a></li>

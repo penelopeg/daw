@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-27 12:26:52
+/* Smarty version 3.1.30, created on 2016-11-27 14:00:21
   from "/var/www/html/ecommerce_daw/views/smarty/templates/footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583ac2fcd4bf34_87021298',
+  'unifunc' => 'content_583ad8e57e7b68_62273069',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e35d8e8928fed690d8ee4ec8df5a0f1b396b7561' => 
     array (
       0 => '/var/www/html/ecommerce_daw/views/smarty/templates/footer.tpl',
-      1 => 1480246009,
+      1 => 1480248988,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583ac2fcd4bf34_87021298 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583ad8e57e7b68_62273069 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="margintop container-fluid footer">
 	<div class="row footer marginfooter">
@@ -80,10 +80,15 @@ function content_583ac2fcd4bf34_87021298 (Smarty_Internal_Template $_smarty_tpl)
 		</p>
 	</div>
 </div>
+
+<!--Sometimes it's better to call scripts after loading every element of the page -->
 <?php echo '<script'; ?>
  src="js/handler.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="js/typeahead.min.js"><?php echo '</script'; ?>
-><?php }
+>
+
+</body>
+</html><?php }
 }

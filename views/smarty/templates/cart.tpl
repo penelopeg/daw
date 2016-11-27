@@ -12,6 +12,9 @@
 	<div class="row">
 		<div class="col-sm-12 col-md-10 col-md-offset-1 links">
 			<div id="removed"></div>
+			{if isset($message)}
+			<h2>{$message}</h2>
+			{/if}
 			<table class="table table-hover">
 				<thead>
 					<tr>
