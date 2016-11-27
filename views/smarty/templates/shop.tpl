@@ -8,6 +8,7 @@
 		</div>
 		<div class="row margintop marginsides">
 			<div class="col-md-12">
+				<h2>{$category}</h2>
 				{if isset($noresults)}
 				<h3>{$noresults}</h3>
 				{/if}

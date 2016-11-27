@@ -71,9 +71,14 @@ class Product {
 	}
 
 	// get product categories
-	public function get_categories() {
-		return select_query_assoc('SELECT id, category FROM product_category');
-	}
+	public function get_categories($id = 0) {
+		if (!empty($id)) {
+			return select_query_assoc('SELECT id, category FROM product_category WHERE id = ?', array($id))[0];
+		}
+		else {
+			return select_query_assoc('SELECT id, category FROM product_category');
+		}
+	}	
 
 	//add categories
 	public function add_category($name) {
