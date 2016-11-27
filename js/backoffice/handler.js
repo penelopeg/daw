@@ -1,17 +1,19 @@
 $(document).ready(function($) {
 
-	function unCheck()
-	{
+	/*Unchecks all product categories*/
+	function unCheck() {
 		$('input:checkbox').each(function(index, el) {
 			$(this).attr('checked', false);		
 		});
 	}
 
+	/*Table rows*/
 	$('.clickable-row').hover(function() {
 		$(this).addClass('clickable-row-border');
 	}, function() {
 		$(this).removeClass('clickable-row-border');
 	}).click(function(event) {
+		/*Gets user information*/
 		$('#fm').val($(this).children('td').first().text());
 		$('#lm').val($(this).children('td').first().next().text());
 		$('#em').val($(this).children('td').first().next().next().text());

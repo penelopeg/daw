@@ -36,7 +36,7 @@ if (isset($_SESSION['admin']) || isset($_SESSION['editor'])) {
 
 			//Update product
 			Product::update_product($id,$name,$desc,$price,$url,$available);
-			// Update product categories to product
+			// Removes all categories before adding the right ones
 			Product::remove_category_2_product($id);
 			foreach ($categories as $category) {
 				Product::add_category_2_product($product_id, $category);
