@@ -31,7 +31,7 @@
 							</div>
 							<button type="submit" class="btn btn-primary">Enter</button>
 							<a href="{$field2.href}">I don't have an account</a>
-							<p><a href="#">I forgot my password!</a></p>
+							<!--<p><a href="#">I forgot my password!</a></p>-->
 						</form>
 					</div>
 				</div>

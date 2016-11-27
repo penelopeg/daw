@@ -25,6 +25,7 @@
 						<div class="col-md-6">
 							<h3 id="title">Your Information</h3>
 							<input type="number" class="hidden" name="client_id" value="{$client_id}"/>
+							<input type="number" class="hidden" name="email" value="{$email}"/>
 							<div class="form-group">
 								<label for="firstname">First Name:</label>
 								<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Input your first name" value="{$firstname}" required/>

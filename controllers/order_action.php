@@ -19,9 +19,15 @@ if (isset($_POST)) {
 		$total +=  $_POST['quant'][$i] * $product['price'];
 	}
 
-	if(Order::add_order($_POST['client_id'], $total, 1, $products)) {
+	if($order_id = Order::add_order($_POST['client_id'], $total, 1, $products)) {
 		setcookie('cart', null, time()-3600, "/");
 		unset($_COOKIE['cart']);
+
+		//Send email informing about order
+		$title = "Order Ref. {$order_id}";
+		$message = "Hi {$_POST['firstname']}, your order was sent out! You can track it on 'My Account' tab. Order total was = {$total} €";
+		mail($_POST['email'], $title, $message);
+		
 		header("location: ../index.php?page=shop&alert=Your order was sent with success!");
 	}
 	else {
